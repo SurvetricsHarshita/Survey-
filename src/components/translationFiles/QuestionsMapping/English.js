@@ -436,7 +436,7 @@ const English = {
         {label:"No",value:"2"}
       ],
           
-    }
+    },
     "F9A": {
       "number": "F9A",
       "question": "What was the recommendation after the examination? Does \"Eye Drop\" one of them?",
@@ -870,10 +870,4 @@ const English = {
     }
   }
 }
-
-
-
-
-
-
 export default English
