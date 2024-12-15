@@ -28,7 +28,7 @@ const English = {
     "1.5": {
       "number": 1.5,
       "question": "Purpose of visit",
-      type: "radio",
+      type: "multi",
       "options": [
         {
           "label": "General Treatment (flu, cough, cold, fever)",
@@ -418,97 +418,25 @@ const English = {
     },
   },
   Section5: {
-    "F1": {
-      "number": "F1",
-      "question": "Whether you visited Eye Clinic.",
-      "type": "radio",
-      "options": [
-        {
-          "label": "Yes",
-          "code": "1"
-        },
-        {
-          "label": "No",
-          "code": "2"
-        }
+    F:{
+      number:"F",
+      question:": Vision Care",
+      type:"rate",
+      STATEMENTS:[
+        {label:"Whether you visited Eye Clinic.", "id":"F1."},
+        {label:"Were you physically examined by a doctor?", "id":"F2."},
+        {label:"Whether eye sights were checked?", "id":"F3."},
+        {label:"WWas the eye doctor’s discussion understandable?", "id":"F4."},
+        {label:"Did the Doctor Build rapport before starting the examination?", "id":"F5."},
+        {label:"Did the Doctor use gloves during the examination?", "id":"F6."},
+        {label:"Did the Doctor use sterilized instruments?", "id":"F7."},
       ],
-      "section": "Section E: Specific Services"
-    },
-    "F2": {
-      "number": "F2",
-      "question": "Were you physically examined by a doctor ?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "Yes",
-          "code": "1"
-        },
-        {
-          "label": "No",
-          "code": "2"
-        }
-      ]
-    },
-    "F3": {
-      "number": "F3",
-      "question": " Whether eye sights were checked?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "Yes",
-          "code": "1"
-        },
-        {
-          "label": "No",
-          "code": "2"
-        }
-      ]
-    },
-    "F4": {
-      "number": "F4",
-      "question": " Did the Doctor Build rapport before starting the examination?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "Yes",
-          "code": "1"
-        },
-        {
-          "label": "No",
-          "code": "2"
-        }
-      ]
-    },
-    "F5": {
-      "number": "F5",
-      type:"radio",
-      "question": "Did the Doctor use gloves during the examination?",
-      "options": [
-        {
-          "label": "Yes",
-          "code": "1"
-        },
-        {
-          "label": "No",
-          "code": "2"
-        }
-      ]
-    },
-    "F6": {
-      "number": "F6",
-      type:"radio",
-      "question": " Did the Doctor use sterilized instruments?",
-      "options": [
-        {
-          "label": "Yes",
-          "code": "1"
-        },
-        {
-          "label": "No",
-          "code": "2"
-        }
-      ]
-    },
+      FREQUENCIES: [
+        {label:"Yes",value:"1" },
+        {label:"No",value:"2"}
+      ],
+          
+    }
     "F9A": {
       "number": "F9A",
       "question": "What was the recommendation after the examination? Does \"Eye Drop\" one of them?",

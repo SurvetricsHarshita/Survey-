@@ -171,7 +171,7 @@ const RespondentDemographic = ({ handleNext, onComplete }) => {
   const validateForm = () => {
     const requiredFields = [
       ...formFieldsStep1.map((field) => field.name),
-      "TypeofRespondent",
+      // "TypeofRespondent",
       ...(formData.TypeofRespondent === "1" || formData.TypeofRespondent === "2"
         ? ["TypeofRespondentName"]
         : []),
@@ -267,8 +267,8 @@ const RespondentDemographic = ({ handleNext, onComplete }) => {
           </div>
         ))}
          <div>
-          <FormLabel>Type of Respondent</FormLabel>
-          <Select
+          {/* <FormLabel>Type of Respondent</FormLabel> */}
+          {/* <Select
             name="TypeofRespondent"
             value={formData.TypeofRespondent || ""}
             onChange={handleChange}
@@ -279,10 +279,9 @@ const RespondentDemographic = ({ handleNext, onComplete }) => {
             <option value="">Select</option>
             <option value="a">	Exposed with Apollo Tyres Foundation / designated NGO based health intervention</option>
             <option value="b">	Exposed with non-ATF based health intervention</option>
-            {/* <option value="3">None</option> */}
-          </Select>
+          </Select> */}
 
-          <FormLabel mt={4}>City</FormLabel>
+          <FormLabel >City</FormLabel>
           <Select
             name="City"
             value={formData.City || ""}
