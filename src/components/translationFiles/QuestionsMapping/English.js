@@ -420,7 +420,7 @@ const English = {
   Section5: {
     F:{
       number:"F",
-      question:": Vision Care",
+      question:": Vision Care (If Applicable)",
       type:"rate",
       STATEMENTS:[
         {label:"Whether you visited Eye Clinic.", "id":"F1."},
@@ -503,7 +503,7 @@ const English = {
       "type": "input"
     },
     "E14F": {
-      "number": "E14",
+      "number": "E14F",
       "question": "Approximate time (in minutes) that the doctor spent with you?",
       "type": "radio",
       "options": [
@@ -526,7 +526,7 @@ const English = {
       ]
     },
     "E15F": {
-      "number": "E15.",
+      "number": "E15F.",
       "question": "How would you rate the doctor in terms of quality of counseling/examination/diagnosis given to you?",
       "type": "radio",
       "options": [
