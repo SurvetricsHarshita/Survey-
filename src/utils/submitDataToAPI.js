@@ -3,7 +3,7 @@ import Axios from 'axios';
 export const submitDataToAPI = async (data) => {
   try {
     // Send a POST request to the backend
-    const response = await Axios.post('https://pptv-backend.vercel.app/add-data', data);
+    const response = await Axios.post('https://three-dec.vercel.app/add-data2', data);
 
     // Check if the response status is 200 (OK)
     if (response.status === 200) {

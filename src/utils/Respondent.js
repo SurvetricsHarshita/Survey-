@@ -33,11 +33,11 @@ export const languageText = {
 // src/static/formFields.js
 export const formFieldsStep1 = [
   { name: "name", placeholder: "Name of the Respondent" },
-  { name: "contact", placeholder: "Contact number",type: "number" ,},
-  { name: " address", placeholder: "Address",},
-  { name: "interviewerName", placeholder: "Name of the interviewer" },
+  { name: "contact", placeholder: "Contact number",type: "number" ,limit:10},
+  // { name: " City", placeholder: "	Name of City",},
+  { name: "interviewerName", placeholder: "	Name of the interviewer" },
   { name: "interviewerId", placeholder: "Interviewer ID" },
- 
+  { name: "address", placeholder: "Address" },
 ];
 
 // export const formFieldsStep2=[ { name: "landmark", placeholder: "Landmark" },

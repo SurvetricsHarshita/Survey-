@@ -28,13 +28,15 @@ function SelectLanguage({handleLanguageSelect }) {
     <option value="hi">Hindi</option>
     <option value="mar">Marathi</option>
     <option value="ass">Assamese</option>
-    {/* <option value="ben">Bengali</option>
-    <option value="tel">Telugu</option>
-    <option value="guj">Gujarati</option>
-    <option value="kan">Kannada</option>
+  <option value="ben">Bengali</option>
+  <option value="guj">Gujarati</option> 
+  <option value="kan">Kannada</option>
+  <option value="tel">Telugu</option>
+    {/* <option value="tel">Telugu</option>
+    <option value="guj">Gujarati</option> */}
+    {/* <option value="kan">Kannada</option>
     <option value="mal">Malayalam</option>
-    <option value="odi">Odia</option> */}
-    {/* <option value="en">Tamil</option> */}
+    <option value="odi">Odia</option>  */}
   </Select>
 </VStack>
 

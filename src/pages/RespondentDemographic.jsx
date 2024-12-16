@@ -28,106 +28,56 @@ const RespondentDemographic = ({ handleNext, onComplete }) => {
   const toast = useToast();
   const navigate = useNavigate();
 
-  const subAreas = {
-    Kolkata: [
-      "Rammohan Roy Road",
-      "Golf Green",
-      "Northern Avenue",
-      "Biren Roy Road",
-      "South Sinthee Road",
-      "Patuli",
-      "S C Mallick Road(Sulekha)",
-      "Lake Gardens",
-      "Indra Biswas Road",
-      "Ramgarh",
-      "Poddar Nagar",
+  const Centers = {
+    Tripura: [
+      "Agartala",
     ],
-    Mumbai: [
-      "Lokhandwala Complex",
-      "Ashok Tower-Kalpataru",
-      "Thakur Village",
-      "Bhakti Park-Dosti Acres",
-      "Old Cadel Road",
-      "Shivaji Park",
-      "Prarthana Samaj, Girgaon",
-      "Union Park",
-      "Versova",
-      "Carter Road",
-      "Hill Road",
-      "NRI Complex-DPS School",
-      "Utsav Chowk Road",
-      "Malabar Hill",
-      "Pedder Road",
-      "Vasant Vihar",
+    "Uttar Pradesh": [
+      "Agra",
+    ],
+    Karnataka: [
+      "Bangalore",
     ],
     Delhi: [
-      "Pachim Vihar",
-      "IP Extension",
-      "South Ex -Part 1",
-      "GK -1",
-      "Janakpuri",
-      "Rajouri Garden",
-      "Preet Vihar",
-      "Malviya Nagar",
-      "Indirapuram -Ghaziabad",
-      "Nirwana Country Gurgaon",
-      "South City Sec 59 Gurgaon",
-      "Sec-22 Noida",
+      "Delhi",
+      "Delhi NCR",
+      "Delhi-TB Project",
     ],
-    Chennai: [
-      "Chetpet",
-      "KK Nagar",
-      "Anna Nagar West",
-      "Jafferkhanpet",
-      "Saidapet",
-      "Mandaveli",
-      "Kotturpuram",
-      "Kilpauk",
-      "Nungambakkam",
-      "Kolathur",
-      "Shenoy Nagar",
-      "West Mambalam",
-      "Velachery",
-      "Virugambakkam",
-      "Mylapore",
+    Haryana: [
+      "Gurugram",
     ],
-    Hyderabad: [
-      "P&T Colony",
-      "Chaitnyapuri",
-      "DD Colony",
-      "Tarnaka",
-      "Marredpally",
-      "Begumpet",
-      "Prakashnagar",
-      "Kukatpally",
-      "KPHB",
-      "Himayatnagar",
-      "Vanasthalipuram",
-      "Banjara Hills",
-      "Jubilee Hills",
-      "HITEC City (Madhapur and Kondapur)",
-      "Gachibowli",
-      "Kokapet",
+    "Madhya Pradesh": [
+      "Gwalior",
+      "Indore",
     ],
-    Bangalore: [
-      "Mathikere",
-      "Sanjay Nagar",
-      "Banasawadi",
-      "R R Nagar",
-      "Banashakari",
-      "Nagarabavi",
-      "Rajajinagar",
-      "Koramagala",
-      "Hosakerahalli",
-      "Willson Garden",
-      "Ulsoor",
-      "Malleshwaram",
-      "Jayanagar",
-      "Sadashivanagar",
-      "Indranagar",
+    Telangana: [
+      "Hyderabad",
+      "Karimnagar",
     ],
-  
+    Punjab: [
+      "Jalandhar",
+    ],
+    Rajasthan: [
+      "Jodhpur",
+    ],
+    Gujarat: [
+      "Mundra Port",
+      "Surat",
+    ],
+    Maharashtra: [
+      "Pune",
+    ],
+    Chhattisgarh: [
+      "Raipur",
+    ],
+    "Andhra Pradesh": [
+      "Vijayawada",
+    ],
+    Assam: [
+      "Guwahati",
+    ]
   };
+  
 
   useEffect(() => {
     requestMicrophonePermission();
@@ -171,11 +121,12 @@ const RespondentDemographic = ({ handleNext, onComplete }) => {
   const validateForm = () => {
     const requiredFields = [
       ...formFieldsStep1.map((field) => field.name),
-      // "TypeofRespondent",
+      "TypeofRespondent",
       ...(formData.TypeofRespondent === "1" || formData.TypeofRespondent === "2"
         ? ["TypeofRespondentName"]
         : []),
       "City",
+     "Center"
    
     ];
 
@@ -254,73 +205,35 @@ const RespondentDemographic = ({ handleNext, onComplete }) => {
         mb={8}
       >
          
-        {formFieldsStep1.map((field, index) => (
-          <div key={index}>
-            <FormLabel>{field.placeholder}:</FormLabel>
-            <Input
-              name={field.name}
-              placeholder={field.placeholder}
-              value={formData[field.name] || ""}
-              onChange={handleChange}
-              type={field.type || "text"}
-            />
-          </div>
-        ))}
+         {formFieldsStep1.map((field, index) => (
+  <div key={index}>
+    <FormLabel>{field.placeholder}:</FormLabel>
+    <Input
+      name={field.name}
+      placeholder={field.placeholder}
+      value={formData[field.name] || ""}
+      onChange={(e) => {
+        if (field.name === "contact") {
+          const value = e.target.value.replace(/\D/g, ""); // Remove non-numeric characters
+          setFormData((prevState) => ({
+            ...prevState,
+            [field.name]: value.slice(0, 10), // Limit to 10 characters
+          }));
+        } else {
+          setFormData((prevState) => ({
+            ...prevState,
+            [field.name]: e.target.value,
+          }));
+        }
+      }}
+      type={field.type || "text"}
+      maxLength={field.name === "contact" ? 10 : undefined} // Enforce max length for contact
+    />
+  </div>
+))}
+
          <div>
-          {/* <FormLabel>Type of Respondent</FormLabel> */}
-          {/* <Select
-            name="TypeofRespondent"
-            value={formData.TypeofRespondent || ""}
-            onChange={handleChange}
-            focusBorderColor="black"
-            borderColor="black"
-            rounded="lg"
-          >
-            <option value="">Select</option>
-            <option value="a">	Exposed with Apollo Tyres Foundation / designated NGO based health intervention</option>
-            <option value="b">	Exposed with non-ATF based health intervention</option>
-          </Select> */}
-
-          <FormLabel >City</FormLabel>
-          <Select
-            name="City"
-            value={formData.City || ""}
-            onChange={handleChange}
-            focusBorderColor="black"
-            borderColor="black"
-            rounded="lg"
-          >
-            <option value="">Select</option>
-            {Object.keys(subAreas).map((city) => (
-              <option key={city} value={city}>
-                {city}
-              </option>
-            ))}
-          </Select>
-
-          {/* {formData.City && subAreas[formData.City] && (
-            <>
-              <FormLabel mt={4}>Sub-Area</FormLabel>
-              <Select
-                name="SubArea"
-                value={formData.SubArea || ""}
-                onChange={handleChange}
-                focusBorderColor="black"
-                borderColor="black"
-                rounded="lg"
-              >
-                <option value="">Select</option>
-                {subAreas[formData.City].map((area, index) => (
-                  <option key={index} value={area}>
-                    {area}
-                  </option>
-                ))}
-              </Select>
-            </>
-          )} */}
-        </div>
-        {/* <div>
-          <FormLabel>2.	Type of Respondent</FormLabel>
+          <FormLabel>Type of Respondent</FormLabel>
           <Select
             name="TypeofRespondent"
             value={formData.TypeofRespondent || ""}
@@ -333,9 +246,9 @@ const RespondentDemographic = ({ handleNext, onComplete }) => {
             <option value="a">	Exposed with Apollo Tyres Foundation / designated NGO based health intervention</option>
             <option value="b">	Exposed with non-ATF based health intervention</option>
             {/* <option value="3">None</option> */}
-          {/* </Select> */}
+          </Select>
 
-          {/* <FormLabel mt={4}>City</FormLabel>
+          <FormLabel mt={4}>City</FormLabel>
           <Select
             name="City"
             value={formData.City || ""}
@@ -345,45 +258,35 @@ const RespondentDemographic = ({ handleNext, onComplete }) => {
             rounded="lg"
           >
             <option value="">Select</option>
-            {Object.keys(subAreas).map((city) => (
+            {Object.keys(Centers).map((city) => (
               <option key={city} value={city}>
                 {city}
               </option>
             ))}
-          </Select> */}
+          </Select>
 
-          {/* {formData.City && subAreas[formData.City] && (
+          {formData.City && Centers[formData.City] && (
             <>
-              <FormLabel mt={4}>Sub-Area</FormLabel>
+              <FormLabel mt={4}>Center</FormLabel>
               <Select
-                name="SubArea"
-                value={formData.SubArea || ""}
+                name="Center"
+                value={formData.Center || ""}
                 onChange={handleChange}
                 focusBorderColor="black"
                 borderColor="black"
                 rounded="lg"
               >
                 <option value="">Select</option>
-                {subAreas[formData.City].map((area, index) => (
+                {Centers[formData.City].map((area, index) => (
                   <option key={index} value={area}>
                     {area}
                   </option>
                 ))}
               </Select>
             </>
-          )} */}
-        {/* </div> */} 
-        {/* {(formData.TypeofRespondent === "1" || formData.TypeofRespondent === "2") && (
-          <div>
-            <FormLabel>Enter Name:</FormLabel>
-            <Input
-              name="TypeofRespondentName"
-              placeholder="Enter name"
-              value={formData.TypeofRespondentName || ""}
-              onChange={handleChange}
-            />
-          </div>
-        )} */}
+          )}
+        </div>
+       
       </SimpleGrid>
 
       <Flex mt={10} justify="space-between" gap={10}>

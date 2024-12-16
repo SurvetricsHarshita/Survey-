@@ -54,14 +54,20 @@ import Introduction from "../components/atoms/Introduction";
 import InputRadio from "../components/Questions/InputRadio";
 import marathi from "../components/translationFiles/QuestionsMapping/marathi";
 import assamese from "../components/translationFiles/QuestionsMapping/assamese";
+import bengali from "../components/translationFiles/QuestionsMapping/bengali";
+import gujrati from "../components/translationFiles/QuestionsMapping/gujrati";
+import telgu from "../components/translationFiles/QuestionsMapping/telgu";
 
 
 
 function QuestionForm() {
-  const { Section1, Section2, Section3, Section4, Section5, Section6, Section7, Section8 } = products || {};
-  const { Section1: HiSection1, Section2: HiSection2, Section3: HiSection3 } = hindi || {};
-  const { Section1: MiSection1, Section2: MiSection2, Section3: MiSection3 } = marathi || {};
-  const { Section1: AssSection1, Section2: AssSection2, Section3: AssSection3 } = assamese || {};
+  const { Section1} = products || {};
+  const { Section1: HiSection1 } = hindi || {};
+  const { Section1: MarSection1} = marathi || {};
+  const { Section1: AssSection1} = assamese || {};
+  const { Section1: BenSection1} = bengali  || {};
+  const { Section1: GujSection1} = gujrati || {};
+  const { Section1: TelSection1} = telgu || {};
   // Add fallback to prevent destructuring null
   // Add fallback to prevent destructuring null
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -71,7 +77,7 @@ function QuestionForm() {
   const [sectionIndex, setSectionIndex] = useState(0);
   // Default is English
   const [language, setLanguage] = useState("en");
-  const [sections, setSections] = useState([Section1, Section2, Section3, Section4, Section5, Section6, Section7, Section8]); // Default is English
+  const [sections, setSections] = useState([Section1]); // Default is English
   const [loading, setLoading] = useState(true);
   const [nccs, setNccs] = useState();
   const [isOther, setOther] = useState(false);
@@ -81,30 +87,8 @@ function QuestionForm() {
   const [responses, setResponses] = useState({});
   const [storedData, setStoredData] = useState({});
   const [isSubmitting, setSubmiiting] = useState(false)
-  const table = [
-    ["E3", "E2", "E2", "E2", "E2", "E1", "D2"],
-    ["E2", "E1", "E1", "E1", "D2", "D2", "D2"],
-    ["E1", "E1", "D2", "D2", "D1", "D1", "D1"],
-    ["D2", "D2", "D1", "D1", "C2", "C2", "C2"],
-    ["D1", "C2", "C2", "C1", "C1", "B2", "B2"],
-    ["C2", "C1", "C1", "B2", "B1", "B1", "B1"],
-    ["C1", "B2", "B2", "B1", "A3", "A3", "A3"],
-    ["C1", "B1", "B1", "A3", "A3", "A2", "A2"],
-    ["B1", "A3", "A3", "A3", "A2", "A2", "A2"],
-    ["B1", "A3", "A3", "A2", "A2", "A1", "A1"]
-  ];
-  // const table = [
-  //   ["E3", "E2", "E2", "E2", "E2", "E1", "D2"], 
-  //   ["E2", "E1", "E1", "E1", "D2", "D2", "D2"], 
-  //   ["E1", "E1", "D2", "D2", "D1", "D1", "D1"], 
-  //   ["D2", "D2", "D1", "D1", "C2", "C2", "C2"], 
-  //   ["D1", "C2", "C2", "C1", "C1", "B2", "B2"], 
-  //   ["C2", "C1", "C1", "B2", "B1", "B1", "B1"], 
-  //   ["C1", "B2", "B2", "B1", "A3", "A3", "A3"],
-  //   ["C1", "B1", "B1", "A3", "A3", "A2", "A2"],
-  //   ["B1", "A3", "A3", "A3", "A2", "A2", "A2"],
-  //   ["B1", "A3", "A3", "A2", "A2", "A1", "A1"]
-  // ];
+ 
+
 
   const [mediaFrequencies, setMediaFrequencies] = useState({});
   const [sliderValue, setSliderValue] = useState(3);
@@ -151,31 +135,45 @@ function QuestionForm() {
     setLanguage(selectedLanguage);
     switch (language) {
       case "en":
-        setSections([Section1, Section2, Section3, Section4, Section5, Section6, Section7, Section8]);
+        setSections([Section1]);
         break;
       case "hi":
         setSections([
           HiSection1,
-          HiSection2,
-          HiSection3
+         
         ]);
         break;
       case "mar":
         setSections([
-          MiSection1,
-          MiSection2,
-          MiSection3
+          MarSection1,
+       
         ]);
         break;
       case "ass":
         setSections([
           AssSection1,
-          AssSection2,
-          AssSection3
-        ]);
+        
+        ]); break;
+        case "ben":
+          setSections([
+            BenSection1
+          
+          ]); 
+          break;
+           case "guj":
+          setSections([
+            GujSection1,
+          
+          ]);
+           break;
+          case "tel":
+          setSections([
+            TelSection1,
+          
+          ]); 
         break;
       default:
-        setSections([Section1, Section2, Section3, Section4, Section5, Section6, Section7, Section8]);; // Default to English if no match
+        setSections([Section1]);; // Default to English if no match
         break;
     }
 
@@ -184,8 +182,7 @@ function QuestionForm() {
 
   const questions = loading
     ? []
-    : [...Object.values(sections[0]), ...Object.values(sections[1]),
-    ...Object.values(sections[2]), ...Object.values(sections[3]), ...Object.values(sections[4]), ...Object.values(sections[5]), ...Object.values(sections[6]), ...Object.values(sections[7])]
+    : [...Object.values(sections[0])]
 
   const [isLoading, setIsLoading] = useState(false);
   const [mediaRecorder, setMediaRecorder] = useState(null);
@@ -196,14 +193,14 @@ function QuestionForm() {
   const [demographicAnswered, setDemographicAnswered] = useState(false);
   const { isTerminate } = useSurveyTermination();
   const { isAsk } = useAsk();
-  // useEffect(() => {
-  //   const storedData = JSON.parse(localStorage.getItem("ProductsTest")) || [];
-  //   setResponses(storedData);
+  useEffect(() => {
+    const storedData = JSON.parse(localStorage.getItem("ProductsTest")) || [];
+    setResponses(storedData);
 
-  //   const selectedLanguage =
-  //     JSON.parse(localStorage.getItem("selectedLanguage")) || "en";
-  //   setLanguage(selectedLanguage);
-  // }, []);
+    const selectedLanguage =
+      JSON.parse(localStorage.getItem("selectedLanguage")) || "en";
+    setLanguage(selectedLanguage);
+  }, []);
 
   useEffect(() => {
     const existingData = JSON.parse(localStorage.getItem("ProductsTest")) || {};
@@ -304,8 +301,9 @@ function QuestionForm() {
         setTerminate(terminate);
       }
       if (currentQuestion.checkAsk) {
-        const display = isAsk(currentQuestion.number, storedData);
+        const display = isAsk(currentQuestion.number, value, storedData);
         setAsk(display);
+        console.log(storedData);
       }
       if (othersSpecify.includes(value)) {
         // If "Others" is selected in any language, keep the previous input if available
@@ -402,70 +400,12 @@ function QuestionForm() {
   };
 
   const handleNext = async () => {
+  
 
-
-
-
-
-
-    if (currentQuestion.autoCodeQuestion) {
-
-
-      setResponses((prev) => {
-        const updatedResponses = { ...prev };
-
-        // Retrieve stored data from localStorage
-        const storedData = JSON.parse(localStorage.getItem('ProductsTest')) || {};
-        const selectedCode = prev[currentQuestion.number]; // assuming the selected code is saved in prev[currentQuestion.number]
-
-        if (currentQuestion.number === "Q2_c") {
-          // Get Q2_c value from prev and Q2_b from storedData
-          const Q2_c = storedData["Q2_c"];
-          const Q2_b = storedData["Q2_b"];
-
-          // Ensure Q2_b is a valid number (it might be a string)
-          const Q2_bValue = parseInt(Q2_b, 10); // Convert Q2_b to a number
-
-          // Calculate the row index based on Q2_c length
-          let row = Q2_c.length;
-          if (row >= 9) row = 9; // Ensure the row does not exceed 9
-
-          // Fetch the correct value for NCCS based on the row and Q2_b
-          const nccsValue = table[row][Q2_bValue - 1];  // Adjust index correctly
-
-          // Update the NCCS value in state
-          setNccs(nccsValue); // Assuming `setNccs` is a state update function
-
-          // Update storedData values with the new NCCS value
-          updatedResponses['NCCS'] = nccsValue; // Correct assignment here
-          updatedResponses['Q2d'] = nccsValue;  // Adjusting Q2d value as well
-
-          storedData['NCCS'] = nccsValue;
-          storedData['Q2d'] = nccsValue;
-
-          // Save updated data to localStorage
-          localStorage.setItem('ProductsTest', JSON.stringify(storedData));
-
-        } else {
-          // Handle the case for other selected codes (not Q2_c)
-          if (selectedCode) {
-            const response = currentQuestion.codes[selectedCode];
-            if (response) {
-              storedData[currentQuestion.autoCodeQuestionVar] = response.save; // Save the mapped value to localStorage
-              localStorage.setItem('ProductsTest', JSON.stringify(storedData));
-            }
-          }
-        }
-
-        return updatedResponses;
-      })
-
+   
+    if(currentQuestion.number==1.6 && storedData["1.5"]==1){
+      setCurrentQuestionIndex((prev) => prev + 1);
     }
-
-
-
-
-
     if (terminate) {
       alert("terminated");
       // onOpen()
@@ -585,7 +525,7 @@ function QuestionForm() {
 
   // setMulti(1)
   const handlePrevious = () => {
-    let includesArray = ["2.1", "4.1", "5.1", "5.10", "5.13", "8.1", "9.10", "1.16", "2.1"];
+    let includesArray = [ "1.8"];
     if (includesArray.includes(currentQuestion.number)) {
       setCurrentQuestionIndex((prevIndex) => {
         let newIndex = prevIndex;
@@ -631,7 +571,7 @@ function QuestionForm() {
     const startTimeDate = existingData.startDate
     const startTimeStr = existingData.startTime
       ;
-
+      // navigate("/submit", { state: { msg: "submit" } });
 
     if (startTimeDate && startTimeStr) {
       // Convert start time to Date object
@@ -665,27 +605,21 @@ function QuestionForm() {
     const updatedProductTest = existingData
     localStorage.setItem("ProductsTest", JSON.stringify(updatedProductTest));
 
-    // Preserve the email in localStorage
-    // const email = localStorage.getItem("email");
-    // // localStorage.clear();
-    // if (email) {
-    //   localStorage.setItem("email", email);
-    // }
 
-    // Navigate to the submit page
-    // navigate("/submit", { state: { msg: "submit" } });
-    localStorage.clear()
-    // Submit data to the API
+
+  
 
 
     const { success, message } = await submitDataToAPI(updatedProductTest);
     setSubmiiting(false)
+    navigate("/submit", { state: { msg: "submit" } });
     if (success) {
       navigate("/submit", { state: { msg: "submit" } });
+      console.log("mabuas")
       localStorage.clear()
     } else {
 
-      // console.log(message); // Show error message if submission fails
+      console.log(message); // Show error message if submission fails
     }
   };
   //Terminate
@@ -702,14 +636,7 @@ function QuestionForm() {
 
     if (!demographicAnswered) return false;
 
-    // Email validation for Q8_cc
-    if (currentQuestion.type == "input" && currentQuestion.number === "Q8_cc") {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email regex
-      if (currentResponse && !emailRegex.test(currentResponse)) {
-        // alert("Please enter a valid email address."); // Show validation message
-        return true; // Don't disable the button
-      }
-    }
+  
 
 
     const storedData = JSON.parse(localStorage.getItem('ProductsTest')) || {};
@@ -717,33 +644,7 @@ function QuestionForm() {
 
 
 
-    if (currentQuestion.type === "multiInput" && currentQuestion.number === "Q8_a") {
-      let areFirstFieldsFilled = true;
-
-      // Check for Q8_a specifically
-      if (currentQuestion.number === "Q8_a") {
-        // Validate that the first `currentQuestion.field` fields are filled
-        areFirstFieldsFilled = currentQuestion.formFieldsStep1
-          .slice(0, currentQuestion.field) // Take only the required number of fields
-          .every(field => {
-            const fieldValue = storedData[field.name]; // Retrieve value from storedData
-            return (
-              fieldValue && // Ensure fieldValue exists
-              fieldValue.trim() !== "" && // Ensure fieldValue is not empty
-              fieldValue.length === 10 && // Ensure it's exactly 10 digits
-              /^[0-9]+$/.test(fieldValue) // Ensure it's numeric
-            );
-          });
-
-        // If validation fails, keep "Next" disabled
-        if (!areFirstFieldsFilled) {
-          console.log("Validation failed for Q8_a. Ensure all fields are valid.");
-          return true; // Keep the button disabled
-        }
-      }
-
-      return !areFirstFieldsFilled; // Return whether the button should be disabled
-    }
+    
 
 
 
@@ -756,8 +657,7 @@ function QuestionForm() {
           return fieldValue && fieldValue.trim() !== ""; // Ensure it's not empty or undefined
         });
 
-      // if (!areAllFieldsFilled) {
-      // alert("Please fill all required fields before proceeding.");
+     
       return !areFirstFiveFieldsFilled // Exit early if validation fails
       // }
     }
@@ -854,34 +754,6 @@ function QuestionForm() {
   };
 
 
-  // const handleChange = (mediaId, frequency) => {
-
-  //   setMediaFrequencies((prevFrequencies) => ({
-  //     ...prevFrequencies,
-  //     [mediaId]: frequency,
-  //   }));
-
-
-
-
-  //   setResponses((prevResponses) => ({
-  //     ...prevResponses,
-  //     [mediaId]: frequency,
-
-  //   }))
-  //   ;
-  //   const storedData = JSON.parse(localStorage.getItem("ProductsTest")) || [];
-  //   if (currentQuestion.termination) {
-  //     const terminate = isTerminate(
-  //       currentQuestion.number,
-  //       "2345",
-  //       currentQuestion.terminationCodes,
-  //       storedData
-  //     );
-  //     setTerminate(terminate);
-  //   }
-
-  // };
 
   const handleChange = async (mediaId, frequency) => {
     // Update `mediaFrequencies`
@@ -983,7 +855,6 @@ function QuestionForm() {
           <FormLabel fontSize={{ base: '16px', md: '20px' }} mb={30} >
             {" "}
             {currentQuestion.number} {currentQuestion.question}
-
             { }
             <br />
 

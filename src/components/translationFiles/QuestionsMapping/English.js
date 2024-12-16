@@ -48,8 +48,8 @@ const English = {
         }
       ]
     },
-  },
-  Section2: {
+ 
+
     "B1. ": {
       "number": "B1",
       "question": "Is the waiting area clean and well-maintained?",
@@ -141,8 +141,7 @@ const English = {
         }
       ]
     },
-  },
-  Section3: {
+
     "C1.": {
       "number": "C1.",
       "question": "What was the first process you underwent upon entering the clinic? (e.g., greeting, registration at the counter)",
@@ -194,8 +193,7 @@ const English = {
         }
       ]
     },
-  },
-  Section4: {
+
     "E1.": {
       "number": "E1.",
       "question": "Were you examined by a doctor?",
@@ -416,8 +414,7 @@ const English = {
         }
       ]
     },
-  },
-  Section5: {
+
     F:{
       number:"F",
       question:": Vision Care (If Applicable)",
@@ -552,8 +549,7 @@ const English = {
         }
       ]
     },
-  },
-  Section6: {
+
     "G1.": {
       "number": "G1.",
       "question": "Whether you were prescribed for blood testing or sputum collection?",
@@ -703,8 +699,7 @@ const English = {
         }
       ]
     },
-  },
-  Section7: {
+
     "H1": {
       "number": "H1",
       "question": "Did the pharmacist explain the dosage and usage of medicines?",
@@ -808,8 +803,7 @@ const English = {
         }
       ]
     },
-  },
-  Section8: {
+
     "I": {
       "number": "I",
       "question": "Rate the overall satisfaction with the family ",

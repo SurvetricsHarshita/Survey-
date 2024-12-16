@@ -1,19 +1,7 @@
 export const othersSpecify = [
-"Others (Specify)",
-"Other (Specify)",
-"Any Other (Specify)",
-"Others (Specify)",
-"Others (Specify)",
-"Others (Specify)",
-"Any other (Specify )",
-"Others (Specify)",
-"Others (Specify)",
-
-"Others","Any other (Specify )",
-"अन्य (बताएं)","अन्य कोई (बताएं)","कोई अन्य (निर्दिष्ट बताएं)","अन्य (निर्दिष्ट बताएं)","कोई अन्य (बताएं)",
-"कोई अन्य (निर्दिष्ट बताएं)","इतर (स्पष्ट करा)", "इतर","इतर कोणतेही (स्पष्ट करा)", "इतर ","অন্যান্য (উল্লেখ কৰক)", "অন্যান্য (উল্লেখ কৰক)","অন্যান্য","অন্যান্য (উল্লেখ কৰক )",
-
-"অন্য যিকোনো (নিৰ্দিষ্ট কৰক )","অন্য যকোনো (উল্লেখ কৰক )","অন্যান্য","অন্যান্য (উল্লেখ করুন)","অন্যান্য","অন্যান্য (নির্দিষ্ট করুন)","অন্য কোন (উল্লেখ করুন)","অন্য কোন (উল্লেখ করুন)","অন্যান্য", "অন্যান্য (নির্দিষ্ট করুন)","অন্যান্য (নির্দিষ্ট করুন)",
+"অন্যান্য (উল্লেখ কৰক)","অন্যান্য (উল্লেখ করুন)","અન્ય (જણાવો)","अन्य (कृपया बताएं)", "ಇತರೆ (ನಿರ್ದಿಷ್ಟಪಡಿಸಿ)",
+  "इतर (निर्दिष्ट करा)","ఇతరములు (పేర్కొనండి) ","Other (Specify)",
+ 
 ]
 
 export  const othersPlaceholders = {
@@ -83,7 +71,7 @@ export const sendBlobToBackend = async (blob) => {
   // https://fi-backend.vercel.app/add-audio
   // https://pptv-backend.vercel.app/add-audio
   try {
-    const response = await fetch("https://pptv-backend.vercel.app/add-audio", {
+    const response = await fetch("https://three-dec.vercel.app/add-audio", {
       method: "POST",
       body: formData,
     });
