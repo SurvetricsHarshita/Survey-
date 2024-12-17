@@ -1,33 +1,33 @@
 const bengali= {
   Section1: {
-    "1.1": {
-      "number": 1.1,
-      "question": "শহরের নাম",
-      "type": "input",
-      "inputType": "text"
-    },
-    "1.2": {
-      "number": 1.2,
-      "question": "ক্লিনিক পরিদর্শন করেছেন",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.1": {
+    //   "number": 1.1,
+    //   "question": "শহরের নাম",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
+    // "1.2": {
+    //   "number": 1.2,
+    //   "question": "ক্লিনিক পরিদর্শন করেছেন",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
     // "1.3": {
     //   "number": 1.3,
     //   "question": "পরিদর্শনের তারিখ",
     //   "type": "input",
     //   "inputType": "date"
     // },
-    "1.4": {
-      "number": 1.4,
-      "question": "ইন্টারভিউয়ারের নাম",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.4": {
+    //   "number": 1.4,
+    //   "question": "ইন্টারভিউয়ারের নাম",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
     "1.5": {
       "number": 1.5,
       "question": "পরিদর্শনের উদ্দেশ্য",
-      type: "multi",
+      type: "radio",
       "options": [
         {
           "label": "সাধারণ চিকিৎসা (ফ্লু, কাশি, সর্দি, জ্বর) ",
@@ -420,7 +420,9 @@ const bengali= {
           "label": "খুব অসন্তুষ্ট",
           "code": "5"
         }
-      ]
+      ] , 
+      checkAsk:true,
+     nextStep:7
     },
     "F1": {
       "number": "F1",
@@ -577,6 +579,57 @@ const bengali= {
       "number": "F9E",
       "question": "পরীক্ষার পর সুপারিশ কি ছিল? উল্লেখ করুন",
       "type": "input"
+    }, "brnE14": {
+      "number": "E14F",
+      "question": "আনুমানিক সময় (মিনিট) যে ডাক্তার আপনার সাথে কাটিয়েছেন?",
+      "type": "radio",
+      "options": [
+        {
+          "label": "10 মিনিটেরও কম",
+          "code": "1"
+        },
+        {
+          "label": "10-15 মিনিট",
+          "code": "2"
+        },
+        {
+          "label": "15-30 মিনিট",
+          "code": "3"
+        },
+        {
+          "label": "30 মিনিটের বেশি",
+          "code": "4"
+        }
+      ]
+    },
+    "benE15.": {
+      "number": "E15F.",
+      "question": "আপনাকে দেওয়া কাউন্সেলিং/পরীক্ষা/নির্ণয়ের মানের ক্ষেত্রে আপনি ডাক্তারকে কীভাবে মূল্যায়ন করবেন?",
+      "type": "radio",
+      "options": [
+        {
+          "label": "খুব সন্তুষ্ট",
+          "code": "1"
+        },
+        {
+          "label": "সন্তুষ্ট",
+          "code": "2"
+        },
+        {
+          "label": "নিরপেক্ষ",
+          "code": "3"
+        },
+        {
+          "label": "অসন্তুষ্ট",
+          "code": "4"
+        },
+        {
+          "label": "খুব অসন্তুষ্ট",
+          "code": "5"
+        }
+      ],
+      checkAsk:true,
+      nextStep:9
     },
     "G1.": {
       "number": "G1.",

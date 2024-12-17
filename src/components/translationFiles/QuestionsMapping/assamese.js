@@ -1,34 +1,34 @@
 const assamese= {
   Section1: {
-    "1.1": {
-      "number": 1.1,
-      "question": "চহৰৰ নাম",
-      "type": "input",
-      "section": "A:শাখা 1: ক্লাইন্টৰ বেকগ্ৰাউণ্ড",
-      "inputType": "text"
-    },
-    "1.2": {
-      "number": 1.2,
-      "question": "ক্লিনিক ভিজিট কৰিছে",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.1": {
+    //   "number": 1.1,
+    //   "question": "চহৰৰ নাম",
+    //   "type": "input",
+    //   "section": "A:শাখা 1: ক্লাইন্টৰ বেকগ্ৰাউণ্ড",
+    //   "inputType": "text"
+    // },
+    // "1.2": {
+    //   "number": 1.2,
+    //   "question": "ক্লিনিক ভিজিট কৰিছে",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
     // "1.3": {
     //   "number": 1.3,
     //   "question": "সাক্ষাতৰ তাৰিখ",
     //   "type": "input",
     //   "inputType": "date"
     // },
-    "1.4": {
-      "number": 1.4,
-      "question": "ইন্টাৰভিৱাৰৰ নাম",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.4": {
+    //   "number": 1.4,
+    //   "question": "ইন্টাৰভিৱাৰৰ নাম",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
     "1.5": {
       "number": 1.5,
       "question": "সাক্ষাতৰ উদ্দেশ্য",
-      type: "multi",
+      type: "radio",
       "options": [
         {
           "label": "সাধাৰণ চিকিৎসা (ফ্লু,কাহ,চৰ্দি,জ্বৰ)",
@@ -421,7 +421,9 @@ const assamese= {
           "label": "খুবেই অসন্তুষ্ট",
           "code": "5"
         }
-      ]
+      ]    , 
+       checkAsk:true,
+      nextStep:7
     },
     "F1": {
       "number": "F1",
@@ -578,6 +580,58 @@ const assamese= {
       "number": "F9E",
       "question": "পৰীক্ষাৰ পিছত কি পৰামৰ্শ দিয়া হৈছিল? অনুগ্ৰহ কৰি উল্লেখ কৰক",
       "type": "input"
+    },
+    "E14F": {
+      "number": "E14F",
+      "question": "চিকিৎসকে আপোনাৰ সৈতে অতিবাহিত কৰা আনুমানিক সময় (মিনিটত)?",
+      "type": "radio",
+      "options": [
+        {
+          "label": "10 মিনিটতকৈ কম",
+          "code": "1"
+        },
+        {
+          "label": "10-15 মিনিট",
+          "code": "2"
+        },
+        {
+          "label": "15-30 মিনিট",
+          "code": "3"
+        },
+        {
+          "label": "30 মিনিটতকৈ অধিক",
+          "code": "4"
+        }
+      ]
+    },
+    "E15F.": {
+      "number": "E15F.",
+      "question": "আপোনাক দিয়া পৰামৰ্শ/পৰীক্ষা/ৰোগ নিৰ্ণয়ৰ মানদণ্ডৰ ক্ষেত্ৰত আপুনি চিকিৎসকক কেনেদৰে মূল্যাঙ্কন কৰিব?",
+      "type": "radio",
+      "options": [
+        {
+          "label": "খুবেই সন্তুষ্ট",
+          "code": "1"
+        },
+        {
+          "label": "সন্তুষ্ট",
+          "code": "2"
+        },
+        {
+          "label": "নিৰপেক্ষ",
+          "code": "3"
+        },
+        {
+          "label": "অসন্তুষ্ট",
+          "code": "4"
+        },
+        {
+          "label": "খুবেই অসন্তুষ্ট",
+          "code": "5"
+        }
+      ],
+      checkAsk:true,
+      nextStep:9
     },
     "G1.": {
       "number": "G1.",

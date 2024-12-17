@@ -19,6 +19,7 @@ function useAsk() {
       "9.7(i)": () => handleQ37(answer, storedData),
       9.18: () => handleQ918(answer, storedData),
       9.19:() => handleQ37(answer, storedData),
+      "E15.": () => handleE15(answer, storedData),
     };
 
     if (questionHandlers[question]) {
@@ -29,6 +30,17 @@ function useAsk() {
       return result;
     }
     return false;
+  }
+
+  function handleE15(answer, storedData) {
+    console.log("hi", storedData);
+    const s4aValue = storedData["1.5"] || "";
+    console.log("hi", s4aValue);
+alert("asd")
+    if (s4aValue == "3" ) {
+      return false;
+    }
+    return true;
   }
   function handleQ13(answer) {
     

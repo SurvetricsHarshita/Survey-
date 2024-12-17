@@ -1,34 +1,29 @@
 const English = {
   Section1: {
-    "1.1": {
-      "number": 1.1,
-      "question": "City Name",
-      "type": "input",
-      "section": "A: Section 1: Client Background",
-      "inputType": "text"
-    },
-    "1.2": {
-      "number": 1.2,
-      "question": "Clinic Visited",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.1": {
+    //   "number": 1.1,
+    //   "question": "City Name",
+    //   "type": "input",
+    //   "section": "A: Section 1: Client Background",
+    //   "inputType": "text"
+    // },
+    // /
     // "1.3": {
     //   "number": 1.3,
     //   "question": "Date of Visit",
     //   "type": "input",
     //   "inputType": "date"
     // },
-    "1.4": {
-      "number": 1.4,
-      "question": "Interviewer name",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.4": {
+    //   "number": 1.4,
+    //   "question": "Interviewer name",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
     "1.5": {
       "number": 1.5,
       "question": "Purpose of visit",
-      type: "multi",
+      type: "radio",
       "options": [
         {
           "label": "General Treatment (flu, cough, cold, fever)",
@@ -412,7 +407,9 @@ const English = {
           "label": "Very Dissatisfied",
           "code": "5"
         }
-      ]
+      ],
+      checkAsk:true,
+      nextStep:7
     },
 
     F:{
@@ -547,7 +544,9 @@ const English = {
           "label": "Very Dissatisfied",
           "code": "5"
         }
-      ]
+      ],
+      checkAsk:true,
+      nextStep:9
     },
 
     "G1.": {

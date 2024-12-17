@@ -1,34 +1,34 @@
 const gujrati= {
   Section1: {
-    "1.1": {
-      "number": 1.1,
-      "question": "શહેરનું નામ",
-      "type": "input",
-      "section": "A: સેક્શન 1: ક્લાયન્ટ પૃષ્ઠભૂમિ",
-      "inputType": "text"
-    },
-    "1.2": {
-      "number": 1.2,
-      "question": "ક્લિનિકની મુલાકાત લીધી",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.1": {
+    //   "number": 1.1,
+    //   "question": "શહેરનું નામ",
+    //   "type": "input",
+    //   "section": "A: સેક્શન 1: ક્લાયન્ટ પૃષ્ઠભૂમિ",
+    //   "inputType": "text"
+    // },
+    // "1.2": {
+    //   "number": 1.2,
+    //   "question": "ક્લિનિકની મુલાકાત લીધી",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
     // "1.3": {
     //   "number": 1.3,
     //   "question": "મુલાકાતની તારીખ",
     //   "type": "input",
     //   "inputType": "date"
     // },
-    "1.4": {
-      "number": 1.4,
-      "question": "ઈન્ટરવ્યુઅરનું નામ",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.4": {
+    //   "number": 1.4,
+    //   "question": "ઈન્ટરવ્યુઅરનું નામ",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
     "1.5": {
       "number": 1.5,
       "question": "મુલાકાતનો હેતુ",
-      "type": "multi",
+      type: "radio",
       "options": [
        
         {
@@ -422,7 +422,9 @@ const gujrati= {
           "label": "ખૂબજ અસંતુષ્ટ",
           "code": "5"
         }
-      ]
+      ] , 
+      checkAsk:true,
+     nextStep:7
     },
     "F1": {
       "number": "F1",
@@ -579,6 +581,57 @@ const gujrati= {
       "number": "F9E",
       "question": "તપાસ કર્યા પછી શું ભલામણ કરવામાં આવી હતી? કૃપા કરી જણાવો",
       "type": "input"
+    },  "gujE14": {
+      "number": "E14F",
+      "question": "ડૉક્ટરે તમારી સાથે વિતાવેલો અંદાજિત સમય (મિનિટમાં)?",
+      "type": "radio",
+      "options": [
+        {
+          "label": "10 મિનિટથી ઓછું",
+          "code": "1"
+        },
+        {
+          "label": "10-15 મિનિટ",
+          "code": "2"
+        },
+        {
+          "label": "15-30 મિનિટ",
+          "code": "3"
+        },
+        {
+          "label": "30 મિનિટથી વધારે",
+          "code": "4"
+        }
+      ]
+    },
+    "gujE15.": {
+      "number": "E15F.",
+      "question": "તમને આપવામાં આવેલ કાઉન્સેલિંગ/તપાસ/નિદાનની ગુણવત્તાના સંદર્ભમાં તમે ડૉક્ટરને કેવી રીતે રેટ કરશો?",
+      "type": "radio",
+      "options": [
+        {
+          "label": "ખૂબજ સંતુષ્ટ",
+          "code": "1"
+        },
+        {
+          "label": "સંતુષ્ટ",
+          "code": "2"
+        },
+        {
+          "label": "તટસ્થ",
+          "code": "3"
+        },
+        {
+          "label": "અસંતુષ્ટ",
+          "code": "4"
+        },
+        {
+          "label": "ખૂબજ અસંતુષ્ટ",
+          "code": "5"
+        }
+      ],
+      checkAsk:true,
+      nextStep:9
     },
     "G1.": {
       "number": "G1.",

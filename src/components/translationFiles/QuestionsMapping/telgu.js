@@ -1,34 +1,34 @@
 const telgu= {
   Section1: {
-    "1.1": {
-      "number": 1.1,
-      "question": "నగరం పేరు",
-      "type": "input",
-      "section": "A: సెక్షన్ 1:క్లయింట్ నేపథ్యం/బ్యాక్‌గ్రౌండ్",
-      "inputType": "text"
-    },
-    "1.2": {
-      "number": 1.2,
-      "question": "క్లినిక్‌ని సందర్శించాను",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.1": {
+    //   "number": 1.1,
+    //   "question": "నగరం పేరు",
+    //   "type": "input",
+    //   "section": "A: సెక్షన్ 1:క్లయింట్ నేపథ్యం/బ్యాక్‌గ్రౌండ్",
+    //   "inputType": "text"
+    // },
+    // "1.2": {
+    //   "number": 1.2,
+    //   "question": "క్లినిక్‌ని సందర్శించాను",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
     // "1.3": {
     //   "number": 1.3,
     //   "question": "సందర్శించిన తేదీ",
     //   "type": "input",
     //   "inputType": "date"
     // },
-    "1.4": {
-      "number": 1.4,
-      "question": "ఇంటర్వ్యూయర్ పేరు",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.4": {
+    //   "number": 1.4,
+    //   "question": "ఇంటర్వ్యూయర్ పేరు",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
     "1.5": {
       "number": 1.5,
       "question": "సందర్శన యొక్క ప్రయోజనం",
-      type: "multi",
+      type: "radio",
       "options": [
         {
           "label": "సాధారణ చికిత్స (ఫ్లూ, దగ్గు, జలుబు, జ్వరం)",
@@ -421,7 +421,9 @@ const telgu= {
           "label": "చాలా అసంతృప్తి చెందాను",
           "code": "5"
         }
-      ]
+      ] , 
+      checkAsk:true,
+     nextStep:7
     },
     "F1": {
       "number": "F1",
@@ -578,6 +580,57 @@ const telgu= {
       "number": "F9E",
       "question": "పరీక్ష తర్వాత సిఫార్సు చేసినది ఏమిటి? దయచేసి పేర్కొనండి",
       "type": "input"
+    }, "tel14": {
+      "number": "E14F",
+      "question": "డాక్టర్ మీతో గడిపిన సుమారు సమయం (నిమిషాల్లో) చెప్పండి?",
+      "type": "radio",
+      "options": [
+        {
+          "label": "10 నిమిషాల కంటే తక్కువ",
+          "code": "1"
+        },
+        {
+          "label": "10 నుండి 15 నిమిషాలు",
+          "code": "2"
+        },
+        {
+          "label": "15 నుండి 30 నిమిషాలు",
+          "code": "3"
+        },
+        {
+          "label": "30 నిమిషాల కంటే ఎక్కువ",
+          "code": "4"
+        }
+      ]
+    },
+    "tel15.": {
+      "number": "E15F.",
+      "question": "మీకు ఇచ్చిన కౌన్సెలింగ్/పరీక్ష/రోగనిర్ధారణ నాణ్యత పరంగా మీరు డాక్టర్‌ను ఎలా రేట్ చేస్తారు?",
+      "type": "radio",
+      "options": [
+        {
+          "label": "చాలా సంతృప్తి చెందాను",
+          "code": "1"
+        },
+        {
+          "label": "సంతృప్తి చెందాను",
+          "code": "2"
+        },
+        {
+          "label": "తటస్థంగా ఉన్నాను",
+          "code": "3"
+        },
+        {
+          "label": "అసంతృప్తి చెందాను",
+          "code": "4"
+        },
+        {
+          "label": "చాలా అసంతృప్తి చెందాను",
+          "code": "5"
+        }
+      ],
+      checkAsk:true,
+      nextStep:9
     },
     "G1.": {
       "number": "G1.",

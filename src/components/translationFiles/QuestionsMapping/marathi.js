@@ -1,30 +1,30 @@
 const marathi = {
   Section1: {
-    "1.1": {
-      "number": 1.1,
-      "question": "शहराचे नाव",
-      "type": "input",
-      "section": "A: विभाग 1: क्लायंटची पार्श्वभूमी",
-      "inputType": "text"
-    },
-    "1.2": {
-      "number": 1.2,
-      "question": "क्लिनिक भेट",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.1": {
+    //   "number": 1.1,
+    //   "question": "शहराचे नाव",
+    //   "type": "input",
+    //   "section": "A: विभाग 1: क्लायंटची पार्श्वभूमी",
+    //   "inputType": "text"
+    // },
+    // "1.2": {
+    //   "number": 1.2,
+    //   "question": "क्लिनिक भेट",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
     // "1.3": {
     //   "number": 1.3,
     //   "question": "भेटीचा दिनांक",
     //   "type": "input",
     //   "inputType": "date"
     // },
-    "1.4": {
-      "number": 1.4,
-      "question": "इंटरव्ह्युव्हरचे नाव",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.4": {
+    //   "number": 1.4,
+    //   "question": "इंटरव्ह्युव्हरचे नाव",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
     "1.5": {
       "number": 1.5,
       "question": "भेटीचे कारण",
@@ -421,7 +421,9 @@ const marathi = {
           "label": "खूप असमाधानी",
           "code": "5"
         }
-      ]
+      ] , 
+      checkAsk:true,
+     nextStep:7
     },
     "F1": {
       "number": "F1",
@@ -514,6 +516,8 @@ const marathi = {
         }
       ]
     },
+
+
     "F9A": {
       "number": "F9A",
       "question": "तपासल्यानंतर काय शिफारस झाली? \"आय ड्रॉप\" त्यापैकी एक आहे का?",
@@ -578,6 +582,57 @@ const marathi = {
       "number": "F9E",
       "question": "तपासल्यानंतर काय शिफारस झाली? कृपया स्पष्ट  करा",
       "type": "input"
+    }, "E14F": {
+      "number": "E14F",
+      "question": "डॉक्टरांनी तुमच्यासोबत घालवलेला अंदाजे वेळ (मिनिटांमध्ये)?",
+     "type": "radio",
+      "options": [
+        {
+          "label": "10 मिनिटांपेक्षा कमी",
+          "code": "1"
+        },
+        {
+          "label": "10-15 मिनिटे",
+          "code": "2"
+        },
+        {
+          "label": "15-30 मिनिटे",
+          "code": "3"
+        },
+        {
+          "label": "३० मिनिटांपेक्षा जास्त",
+          "code": "4"
+        }
+      ]
+    },
+    "m15": {
+      "number": "E15F.",
+      "question": "तुम्हाला दिलेल्या समुपदेशन/तपासणी/निदानाच्या गुणवत्तेनुसार तुम्ही डॉक्टरांना कसे रेट कराल?",
+      "type": "radio",
+      "options": [
+        {
+          "label": "खूप समाधानी",
+          "code": "1"
+        },
+        {
+          "label": "समाधानी",
+          "code": "2"
+        },
+        {
+          "label": "तटस्थ",
+          "code": "3"
+        },
+        {
+          "label": "असमाधानी",
+          "code": "4"
+        },
+        {
+          "label": "खूप असमाधानी",
+          "code": "5"
+        }
+      ],
+      checkAsk:true,
+      nextStep:9
     },
     "G1.": {
       "number": "G1.",

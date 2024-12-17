@@ -125,7 +125,7 @@ const RespondentDemographic = ({ handleNext, onComplete }) => {
       ...(formData.TypeofRespondent === "1" || formData.TypeofRespondent === "2"
         ? ["TypeofRespondentName"]
         : []),
-      "City",
+      "state",
      "Center"
    
     ];
@@ -235,24 +235,24 @@ const RespondentDemographic = ({ handleNext, onComplete }) => {
          <div>
        
 
-          <FormLabel mt={4}>City</FormLabel>
+          <FormLabel mt={4}>State</FormLabel>
           <Select
-            name="City"
-            value={formData.City || ""}
+            name="state"
+            value={formData.state || ""}
             onChange={handleChange}
             focusBorderColor="black"
             borderColor="black"
             rounded="lg"
           >
             <option value="">Select</option>
-            {Object.keys(Centers).map((city) => (
-              <option key={city} value={city}>
-                {city}
+            {Object.keys(Centers).map((state) => (
+              <option key={state} value={state}>
+                {state}
               </option>
             ))}
           </Select>
 
-          {formData.City && Centers[formData.City] && (
+          {formData.state && Centers[formData.state] && (
             <>
               <FormLabel mt={4}>Center</FormLabel>
               <Select
@@ -264,7 +264,7 @@ const RespondentDemographic = ({ handleNext, onComplete }) => {
                 rounded="lg"
               >
                 <option value="">Select</option>
-                {Centers[formData.City].map((area, index) => (
+                {Centers[formData.state].map((area, index) => (
                   <option key={index} value={area}>
                     {area}
                   </option>

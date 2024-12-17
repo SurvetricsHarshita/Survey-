@@ -1,33 +1,33 @@
 const kannada= {
   Section1: {
-    "1.1": {
-      "number": 1.1,
-      "question": "ನಗರದ ಹೆಸರು",
-      "type": "input",
-      "inputType": "text"
-    },
-    "1.2": {
-      "number": 1.2,
-      "question": "ಕ್ಲಿನಿಕ್ ಭೇಟಿ",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.1": {
+    //   "number": 1.1,
+    //   "question": "ನಗರದ ಹೆಸರು",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
+    // "1.2": {
+    //   "number": 1.2,
+    //   "question": "ಕ್ಲಿನಿಕ್ ಭೇಟಿ",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
     // "1.3": {
     //   "number": 1.3,
     //   "question": "ಭೇಟಿಯ ದಿನಾಂಕ",
     //   "type": "input",
     //   "inputType": "date"
     // },
-    "1.4": {
-      "number": 1.4,
-      "question": "ಸಂದರ್ಶಕರ ಹೆಸರು",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.4": {
+    //   "number": 1.4,
+    //   "question": "ಸಂದರ್ಶಕರ ಹೆಸರು",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
     "1.5": {
       "number": 1.5,
       "question": "ಭೇಟಿಯ ಉದ್ದೇಶ",
-      "type": "multi",
+      type: "radio",
       "options": [
         {
           "label": "ಸಾಮಾನ್ಯ ಚಿಕಿತ್ಸೆ (ಜ್ವರ, ಕೆಮ್ಮು, ಶೀತ, ಜ್ವರ)",
@@ -420,7 +420,9 @@ const kannada= {
           "label": "ತುಂಬಾ ಅತೃಪ್ತಿಕರ",
           "code": "5"
         }
-      ]
+      ] , 
+      checkAsk:true,
+     nextStep:7
     },
     "F1": {
       "number": "F1",
@@ -577,6 +579,57 @@ const kannada= {
       "number": "F9E",
       "question": "ಪರೀಕ್ಷೆಯ ನಂತರ ಏನನ್ನು ಶಿಫಾರಸ್ಸು ಮಾಡಲಾಯಿತು? ದಯವಿಟ್ಟು ನಿರ್ದಿಷ್ಟಪಡಿಸಿ",
       "type": "input"
+    },   "kan14": {
+      "number": "E14F",
+      "question": "ಡಾಕ್ಟರ್ ನಿಮ್ಮೊಂದಿಗೆ ಕಳೆದ ಅಂದಾಜು ಸಮಯ (ನಿಮಿಷಗಳಲ್ಲಿ)?",
+      "type": "radio",
+      "options": [
+        {
+          "label": "10 ನಿಮಿಷಗಳಿಗಿಂತಲೂ ಕಡಿಮೆ",
+          "code": "1"
+        },
+        {
+          "label": "10-15 ನಿಮಿಷಗಳು",
+          "code": "2"
+        },
+        {
+          "label": "15-30 ನಿಮಿಷಗಳು",
+          "code": "3"
+        },
+        {
+          "label": "30 ನಿಮಿಷಗಳಿಗಿಂತಲೂ ಹೆಚ್ಚು",
+          "code": "4"
+        }
+      ]
+    },
+    "kanE15.": {
+      "number": "E15F.",
+      "question": "ನಿಮಗೆ ನೀಡಲಾದ ಕೌನ್ಸಿಲಿಂಗ್/ಪರೀಕ್ಷೆ/ರೋಗನಿರ್ಣಯದ ಗುಣಮಟ್ಟಕ್ಕೆ ಸಂಬಂಧಿಸಿದಂತೆ ನೀವು ವೈದ್ಯರನ್ನು ಹೇಗೆ ರೇಟ್ ಮಾಡುತ್ತೀರಿ?",
+      "type": "radio",
+      "options": [
+        {
+          "label": "ತುಂಬಾ ತೃಪ್ತಿಕರ",
+          "code": "1"
+        },
+        {
+          "label": "ತೃಪ್ತಿಕರ",
+          "code": "2"
+        },
+        {
+          "label": "ತಟಸ್ಥ",
+          "code": "3"
+        },
+        {
+          "label": "ಅತೃಪ್ತಿಕರ",
+          "code": "4"
+        },
+        {
+          "label": "ತುಂಬಾ ಅತೃಪ್ತಿಕರ",
+          "code": "5"
+        }
+      ],
+      checkAsk:true,
+      nextStep:9
     },
     "G1.": {
       "number": "G1.",

@@ -1,34 +1,34 @@
 const hindi= {
   Section1: {
-    "1.1": {
-      "number": 1.1,
-      "question": "शहर का नाम",
-      "type": "input",
-      "section": "A: सेक्‍शन 1: ग्राहक की पृष्ठभूमि",
-      "inputType": "text"
-    },
-    "1.2": {
-      "number": 1.2,
-      "question": "विजिट की गई क्‍लीनिक",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.1": {
+    //   "number": 1.1,
+    //   "question": "शहर का नाम",
+    //   "type": "input",
+    //   "section": "A: सेक्‍शन 1: ग्राहक की पृष्ठभूमि",
+    //   "inputType": "text"
+    // },
+    // "1.2": {
+    //   "number": 1.2,
+    //   "question": "विजिट की गई क्‍लीनिक",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
     // "1.3": {
     //   "number": 1.3,
     //   "question": "विज़िट की तारीख़",
     //   "type": "input",
     //   "inputType": "date"
     // },
-    "1.4": {
-      "number": 1.4,
-      "question": "इंटरव्‍यूवर का नाम",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.4": {
+    //   "number": 1.4,
+    //   "question": "इंटरव्‍यूवर का नाम",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
     "1.5": {
       "number": 1.5,
       "question": "विजिट का उद्देश्य",
-      "type": "multi",
+      type: "radio",
       "options": [
         {
           "label": "सामान्य इलाज (फ्लू, खांसी, सर्दी, बुखार)",
@@ -192,9 +192,12 @@ const hindi= {
         {
           "label": "10-15 मिनट",
           "code": "2"
+        }, {
+          "label": "15-30 मिनट ",
+          "code": "3"
         },
         {
-          "label": "15-30 मिनट (3) 30 मिनट से ज्‍यादा",
+          "label": "30 मिनट से ज्‍यादा",
           "code": "4"
         }
       ]
@@ -381,9 +384,12 @@ const hindi= {
         {
           "label": "10-15 मिनट",
           "code": "2"
+        }, {
+          "label": "15-30 मिनट ",
+          "code": "3"
         },
         {
-          "label": "15-30 मिनट (3) 30 मिनट से ज्‍यादा",
+          "label": "30 मिनट से ज्‍यादा",
           "code": "4"
         }
       ]
@@ -413,7 +419,9 @@ const hindi= {
           "label": "बहुत असंतुष्ट",
           "code": "5"
         }
-      ]
+      ] , 
+      checkAsk:true,
+     nextStep:7
     },
     "F1": {
       "number": "F1",
@@ -570,6 +578,56 @@ const hindi= {
       "number": "F9E",
       "question": "जांच करने के बाद क्या सिफारिश की गई थी? कृपया बताएं",
       "type": "input"
+    },  "hi14": {
+      "number": "E14F",
+      "question": "डॉक्टर ने आपके साथ लगभग कितना समय (मिनटों में) बिताया था?",
+      "type": "radio",
+      "options": [
+        {
+          "label": "10 मिनट से कम",
+          "code": "1"
+        },
+        {
+          "label": "10-15 मिनट",
+          "code": "2"
+        }, {
+          "label": "15-30 मिनट ",
+          "code": "3"
+        },
+        {
+          "label": "30 मिनट से ज्‍यादा",
+          "code": "4"
+        }
+      ]
+    },
+    "hi15.": {
+      "number": "E15F.",
+      "question": "आपको दिए गए परामर्श/जांच/डायग्‍नोसिस की क्‍वालिटी के संबंध में आप डॉक्टर को कैसा रेट करेंगे?",
+      "type": "radio",
+      "options": [
+        {
+          "label": "बहुत संतुष्ट हूं",
+          "code": "1"
+        },
+        {
+          "label": "संतुष्ट",
+          "code": "2"
+        },
+        {
+          "label": "न ही संतुष्‍ट और न ही असंतुष्‍ट",
+          "code": "3"
+        },
+        {
+          "label": "असंतुष्ट",
+          "code": "4"
+        },
+        {
+          "label": "बहुत असंतुष्ट",
+          "code": "5"
+        }
+      ],
+      checkAsk:true,
+      nextStep:9
     },
     "G1.": {
       "number": "G1.",
@@ -682,9 +740,12 @@ const hindi= {
         {
           "label": "10-15 मिनट",
           "code": "2"
+        }, {
+          "label": "15-30 मिनट ",
+          "code": "3"
         },
         {
-          "label": "15-30 मिनट (3) 30 मिनट से ज्‍यादा",
+          "label": "30 मिनट से ज्‍यादा",
           "code": "4"
         }
       ]
