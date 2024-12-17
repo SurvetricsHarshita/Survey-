@@ -13,12 +13,12 @@ const gujrati= {
       "type": "input",
       "inputType": "text"
     },
-    "1.3": {
-      "number": 1.3,
-      "question": "મુલાકાતની તારીખ",
-      "type": "input",
-      "inputType": "date"
-    },
+    // "1.3": {
+    //   "number": 1.3,
+    //   "question": "મુલાકાતની તારીખ",
+    //   "type": "input",
+    //   "inputType": "date"
+    // },
     "1.4": {
       "number": 1.4,
       "question": "ઈન્ટરવ્યુઅરનું નામ",

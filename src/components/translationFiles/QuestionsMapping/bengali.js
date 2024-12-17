@@ -12,12 +12,12 @@ const bengali= {
       "type": "input",
       "inputType": "text"
     },
-    "1.3": {
-      "number": 1.3,
-      "question": "পরিদর্শনের তারিখ",
-      "type": "input",
-      "inputType": "date"
-    },
+    // "1.3": {
+    //   "number": 1.3,
+    //   "question": "পরিদর্শনের তারিখ",
+    //   "type": "input",
+    //   "inputType": "date"
+    // },
     "1.4": {
       "number": 1.4,
       "question": "ইন্টারভিউয়ারের নাম",

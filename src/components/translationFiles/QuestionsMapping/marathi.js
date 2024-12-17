@@ -13,12 +13,12 @@ const marathi = {
       "type": "input",
       "inputType": "text"
     },
-    "1.3": {
-      "number": 1.3,
-      "question": "भेटीचा दिनांक",
-      "type": "input",
-      "inputType": "date"
-    },
+    // "1.3": {
+    //   "number": 1.3,
+    //   "question": "भेटीचा दिनांक",
+    //   "type": "input",
+    //   "inputType": "date"
+    // },
     "1.4": {
       "number": 1.4,
       "question": "इंटरव्ह्युव्हरचे नाव",

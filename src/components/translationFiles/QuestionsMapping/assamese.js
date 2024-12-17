@@ -13,12 +13,12 @@ const assamese= {
       "type": "input",
       "inputType": "text"
     },
-    "1.3": {
-      "number": 1.3,
-      "question": "সাক্ষাতৰ তাৰিখ",
-      "type": "input",
-      "inputType": "date"
-    },
+    // "1.3": {
+    //   "number": 1.3,
+    //   "question": "সাক্ষাতৰ তাৰিখ",
+    //   "type": "input",
+    //   "inputType": "date"
+    // },
     "1.4": {
       "number": 1.4,
       "question": "ইন্টাৰভিৱাৰৰ নাম",

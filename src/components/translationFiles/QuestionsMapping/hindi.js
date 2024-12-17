@@ -13,12 +13,12 @@ const hindi= {
       "type": "input",
       "inputType": "text"
     },
-    "1.3": {
-      "number": 1.3,
-      "question": "विज़िट की तारीख़",
-      "type": "input",
-      "inputType": "date"
-    },
+    // "1.3": {
+    //   "number": 1.3,
+    //   "question": "विज़िट की तारीख़",
+    //   "type": "input",
+    //   "inputType": "date"
+    // },
     "1.4": {
       "number": 1.4,
       "question": "इंटरव्‍यूवर का नाम",
