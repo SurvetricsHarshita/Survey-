@@ -423,96 +423,24 @@ const hindi= {
       checkAsk:true,
      nextStep:7
     },
-    "F1": {
-      "number": "F1",
-      "question": "क्‍या आप आई क्‍लीनिक पर गए थे।",
-      "type": "radio",
-      "options": [
-        {
-          "label": "हाँ",
-          "code": "1"
-        },
-        {
-          "label": "नहीं",
-          "code": "2"
-        }
+    F:{
+      number:"F",
+      question:": Vision Care (If Applicable)",
+      type:"rate",
+      STATEMENTS:[
+        {label:"क्‍या आप आई क्‍लीनिक पर गए थे।", "id":"F1."},
+        {label:"क्या किसी डॉक्टर ने खुद आपकी जांच की थी?", "id":"F2."},
+        {label: " क्या आई साईट की जांच की गई थी?","id":"F3."},
+        {label:"WWas the eye doctor’s discussion understandable?", "id":"F4."},
+        {label: "क्या डॉक्टर ने जांच शुरू करने से पहले आपके साथ तालमेल बैठाने की कोशिश की थी?","id":"F5."},
+        {label:"क्या डॉक्टर ने जांच के दौरान ग्‍लव्‍स (दस्ताने) पहने थे?","id":"F6."},
+        {label:"क्या डॉक्टर ने स्‍टेरीलाईज्‍ड इंस्‍ट्रूमेंट्स का इस्‍तेमाल किया था?", "id":"F7."},
       ],
-      "section": "सेक्‍शन E: विशेष  सेवाएँ"
-    },
-    "F2": {
-      "number": "F2",
-      "question": "क्या किसी डॉक्टर ने खुद आपकी जांच की थी?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "हाँ",
-          "code": "1"
-        },
-        {
-          "label": "नहीं",
-          "code": "2"
-        }
-      ]
-    },
-    "F3": {
-      "number": "F3",
-      "question": " क्या आई साईट की जांच की गई थी?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "हाँ",
-          "code": "1"
-        },
-        {
-          "label": "नहीं",
-          "code": "2"
-        }
-      ]
-    },
-    "F4": {
-      "number": "F4",
-      "question": "क्या डॉक्टर ने जांच शुरू करने से पहले आपके साथ तालमेल बैठाने की कोशिश की थी?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "हाँ",
-          "code": "1"
-        },
-        {
-          "label": "नहीं",
-          "code": "2"
-        }
-      ]
-    },
-    "F5": {
-      "number": "F5",
-      "question": "क्या डॉक्टर ने जांच के दौरान ग्‍लव्‍स (दस्ताने) पहने थे?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "हाँ",
-          "code": "1"
-        },
-        {
-          "label": "नहीं",
-          "code": "2"
-        }
-      ]
-    },
-    "F6": {
-      "number": "F6",
-      "question": "क्या डॉक्टर ने स्‍टेरीलाईज्‍ड इंस्‍ट्रूमेंट्स का इस्‍तेमाल किया था?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "हाँ",
-          "code": "1"
-        },
-        {
-          "label": "नहीं",
-          "code": "2"
-        }
-      ]
+      FREQUENCIES: [
+        {label: "हाँ",value:"1" },
+        {label:"नहीं",value:"2"}
+      ],
+          
     },
     "F9A": {
       "number": "F9A",

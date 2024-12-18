@@ -426,96 +426,24 @@ const gujrati= {
       checkAsk:true,
      nextStep:7
     },
-    "F1": {
-      "number": "F1",
-      "question": "શું તમે આઇ ક્લિનિકની મુલાકાત લીધી હતી.",
-      "type": "radio",
-      "options": [
-        {
-          "label": "હા",
-          "code": "1"
-        },
-        {
-          "label": "ના",
-          "code": "2"
-        }
+    F:{
+      number:"F",
+      question:": Vision Care (If Applicable)",
+      type:"rate",
+      STATEMENTS:[
+        {label:"શું તમે આઇ ક્લિનિકની મુલાકાત લીધી હતી.", "id":"F1."},
+        {label:"શું ડૉક્ટર દ્વારા તમારી શારીરિક તપાસ કરવામાં આવી હતી?", "id":"F2."},
+        {label: "શું  આંખોની દૃષ્ટિને તપાસવામાં આવી હતી?","id":"F3."},
+        {label:"WWas the eye doctor’s discussion understandable?", "id":"F4."},
+        {label:" શું ડૉક્ટરે તપાસ/એકઝામીન શરૂ કરતા પહેલા તાલમેલ બનાવ્યો હતો?","id":"F5."},
+        {label:"શું ડોકટરે તપાસ દરમિયાન ગ્લોવ્ઝનો ઉપયોગ કર્યો હતો?","id":"F6."},
+        {label:"શું ડૉક્ટરે સ્ટરીલાઈઝડ સાધનોનો ઉપયોગ કર્યો હતો?", "id":"F7."},
       ],
-      "section": "સેક્શન E: ચોક્કસ સેવાઓ"
-    },
-    "F2": {
-      "number": "F2",
-      "question": "શું ડૉક્ટર દ્વારા તમારી શારીરિક તપાસ કરવામાં આવી હતી?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "હા",
-          "code": "1"
-        },
-        {
-          "label": "ના",
-          "code": "2"
-        }
-      ]
-    },
-    "F3": {
-      "number": "F3",
-      "question": "શું  આંખોની દૃષ્ટિને તપાસવામાં આવી હતી?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "હા",
-          "code": "1"
-        },
-        {
-          "label": "ના",
-          "code": "2"
-        }
-      ]
-    },
-    "F4": {
-      "number": "F4",
-      "question": " શું ડૉક્ટરે તપાસ/એકઝામીન શરૂ કરતા પહેલા તાલમેલ બનાવ્યો હતો?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "હા",
-          "code": "1"
-        },
-        {
-          "label": "ના",
-          "code": "2"
-        }
-      ]
-    },
-    "F5": {
-      "number": "F5",
-      "question": "શું ડોકટરે તપાસ દરમિયાન ગ્લોવ્ઝનો ઉપયોગ કર્યો હતો?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "હા",
-          "code": "1"
-        },
-        {
-          "label": "ના",
-          "code": "2"
-        }
-      ]
-    },
-    "F6": {
-      "number": "F6",
-      "question": "શું ડૉક્ટરે સ્ટરીલાઈઝડ સાધનોનો ઉપયોગ કર્યો હતો?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "હા",
-          "code": "1"
-        },
-        {
-          "label": "ના",
-          "code": "2"
-        }
-      ]
+      FREQUENCIES: [
+        {label:"હા",value:"1" },
+        {label:"ના",value:"2"}
+      ],
+          
     },
     "F9A": {
       "number": "F9A",

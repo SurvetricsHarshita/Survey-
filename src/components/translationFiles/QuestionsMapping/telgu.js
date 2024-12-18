@@ -425,96 +425,24 @@ const telgu= {
       checkAsk:true,
      nextStep:7
     },
-    "F1": {
-      "number": "F1",
-      "question": "మీరు ఐ క్లినిక్‌ని సందర్శించినా.",
-      "type": "radio",
-      "options": [
-        {
-          "label": "అవును",
-          "code": "1"
-        },
-        {
-          "label": "కాదు",
-          "code": "2"
-        }
+    F:{
+      number:"F",
+      question:": Vision Care (If Applicable)",
+      type:"rate",
+      STATEMENTS:[
+        {label: "మీరు ఐ క్లినిక్‌ని సందర్శించినా.","id":"F1."},
+        {label: "మిమ్మల్ని డాక్టర్ శారీరకంగా పరీక్షించారా?", "id":"F2."},
+        {label:"కంటి చూపు చెక్ చేయబడిందా?","id":"F3."},
+        {label:"WWas the eye doctor’s discussion understandable?", "id":"F4."},
+        {label:"పరీక్ష ప్రారంభించే ముందు వైద్యుడు సత్సంబంధాలను ఏర్పరచుకున్నారా?","id":"F5."},
+        {label:"పరీక్ష సమయంలో డాక్టర్ చేతి తొడుగులు ఉపయోగించారా?","id":"F6."},
+        {label:"డాక్టర్ స్టెరిలైజ్డ్ చేసిన పరికరాలను ఉపయోగించారా?","id":"F7."},
       ],
-      "section": "సెక్షన్ E:నిర్దిష్ట సేవలు"
-    },
-    "F2": {
-      "number": "F2",
-      "question": "మిమ్మల్ని డాక్టర్ శారీరకంగా పరీక్షించారా?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "అవును",
-          "code": "1"
-        },
-        {
-          "label": "కాదు",
-          "code": "2"
-        }
-      ]
-    },
-    "F3": {
-      "number": "F3",
-      "question": "కంటి చూపు చెక్ చేయబడిందా?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "అవును",
-          "code": "1"
-        },
-        {
-          "label": "కాదు",
-          "code": "2"
-        }
-      ]
-    },
-    "F4": {
-      "number": "F4",
-      "question": "పరీక్ష ప్రారంభించే ముందు వైద్యుడు సత్సంబంధాలను ఏర్పరచుకున్నారా?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "అవును",
-          "code": "1"
-        },
-        {
-          "label": "కాదు",
-          "code": "2"
-        }
-      ]
-    },
-    "F5": {
-      "number": "F5",
-      "question": "పరీక్ష సమయంలో డాక్టర్ చేతి తొడుగులు ఉపయోగించారా?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "అవును",
-          "code": "1"
-        },
-        {
-          "label": "కాదు",
-          "code": "2"
-        }
-      ]
-    },
-    "F6": {
-      "number": "F6",
-      "question": "డాక్టర్ స్టెరిలైజ్డ్ చేసిన పరికరాలను ఉపయోగించారా?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "అవును",
-          "code": "1"
-        },
-        {
-          "label": "కాదు",
-          "code": "2"
-        }
-      ]
+      FREQUENCIES: [
+        {label:"అవును",value:"1" },
+        {label:"కాదు",value:"2"}
+      ],
+          
     },
     "F9A": {
       "number": "F9A",

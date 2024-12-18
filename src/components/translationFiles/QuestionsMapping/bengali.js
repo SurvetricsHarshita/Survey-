@@ -424,96 +424,24 @@ const bengali= {
       checkAsk:true,
      nextStep:7
     },
-    "F1": {
-      "number": "F1",
-      "question": "আপনি আই ক্লিনিকে গিয়েছিলেন কি।",
-      "type": "radio",
-      "options": [
-        {
-          "label": "হ্যাঁ",
-          "code": "1"
-        },
-        {
-          "label": "না",
-          "code": "2"
-        }
+    F:{
+      number:"F",
+      question:": Vision Care (If Applicable)",
+      type:"rate",
+      STATEMENTS:[
+        {label: "আপনি আই ক্লিনিকে গিয়েছিলেন কি।", "id":"F1."},
+        {label:"একজন ডাক্তার কি আপনাকে শারীরিকভাবে পরীক্ষা করেছিলেন?", "id":"F2."},
+        {label: " চোখের দৃষ্টি পরীক্ষা করা হয়েছে কি?","id":"F3."},
+        {label:"Was the eye doctor’s discussion understandable?", "id":"F4."},
+        {label:" পরীক্ষা শুরু করার আগে ডাক্তার কি সম্পর্ক তৈরি করেছিলেন?","id":"F5."},
+        {label:"পরীক্ষার সময় ডাক্তার কি গ্লাভস ব্যবহার করেছিলেন?","id":"F6."},
+        {label:" ডাক্তার কি জীবাণুমুক্ত যন্ত্র ব্যবহার করেছেন?", "id":"F7."},
       ],
-      "section": "বিভাগ E: নির্দিষ্ট পরিষেবা"
-    },
-    "F2": {
-      "number": "F2",
-      "question": "একজন ডাক্তার কি আপনাকে শারীরিকভাবে পরীক্ষা করেছিলেন?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "হ্যাঁ",
-          "code": "1"
-        },
-        {
-          "label": "না",
-          "code": "2"
-        }
-      ]
-    },
-    "F3": {
-      "number": "F3",
-      "question": " চোখের দৃষ্টি পরীক্ষা করা হয়েছে কি?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "হ্যাঁ",
-          "code": "1"
-        },
-        {
-          "label": "না",
-          "code": "2"
-        }
-      ]
-    },
-    "F4": {
-      "number": "F4",
-      "question": " পরীক্ষা শুরু করার আগে ডাক্তার কি সম্পর্ক তৈরি করেছিলেন?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "হ্যাঁ",
-          "code": "1"
-        },
-        {
-          "label": "না",
-          "code": "2"
-        }
-      ]
-    },
-    "F5": {
-      "number": "F5",
-      "question": "পরীক্ষার সময় ডাক্তার কি গ্লাভস ব্যবহার করেছিলেন?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "হ্যাঁ",
-          "code": "1"
-        },
-        {
-          "label": "না",
-          "code": "2"
-        }
-      ]
-    },
-    "F6": {
-      "number": "F6",
-      "question": " ডাক্তার কি জীবাণুমুক্ত যন্ত্র ব্যবহার করেছেন?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "হ্যাঁ",
-          "code": "1"
-        },
-        {
-          "label": "না",
-          "code": "2"
-        }
-      ]
+      FREQUENCIES: [
+        {label:"হ্যাঁ",value:"1" },
+        {label:"না",value:"2"}
+      ],
+          
     },
     "F9A": {
       "number": "F9A",

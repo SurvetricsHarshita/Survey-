@@ -425,96 +425,24 @@ const marathi = {
       checkAsk:true,
      nextStep:7
     },
-    "F1": {
-      "number": "F1",
-      "question": "तुम्ही आय क्लिनिकला (डोळ्याच्या) भेट दिली होती की नाही.",
-      "type": "radio",
-      "options": [
-        {
-          "label": "होय",
-          "code": "1"
-        },
-        {
-          "label": "नाही",
-          "code": "2"
-        }
+    F:{
+      number:"F",
+      question:": Vision Care (If Applicable)",
+      type:"rate",
+      STATEMENTS:[
+        {label:"तुम्ही आय क्लिनिकला (डोळ्याच्या) भेट दिली होती की नाही.","id":"F1."},
+        {label: "तुमची डॉक्टरांनी शारीरिक तपासणी केली होती का?", "id":"F2."},
+        {label:" डोळ्यांची दृष्टी तपासली की नाही?","id":"F3."},
+        {label:"WWas the eye doctor’s discussion understandable?", "id":"F4."},
+        {label:"तपासणी सुरू करण्यापूर्वी डॉक्टरांनी विश्वासाचे नाते निर्माण केले का?","id":"F5."},
+        {label:"तपासणी दरम्यान डॉक्टरांनी हातमोजे वापरले का?","id":"F6."},
+        {label:" डॉक्टरांनी निर्जंतुकीकरण साधने वापरली आहेत का?","id":"F7."},
       ],
-      "section": "E विभाग : विशिष्ट सेवा"
-    },
-    "F2": {
-      "number": "F2",
-      "question": "तुमची डॉक्टरांनी शारीरिक तपासणी केली होती का?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "होय",
-          "code": "1"
-        },
-        {
-          "label": "नाही",
-          "code": "2"
-        }
-      ]
-    },
-    "F3": {
-      "number": "F3",
-      "question": " डोळ्यांची दृष्टी तपासली की नाही?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "होय",
-          "code": "1"
-        },
-        {
-          "label": "नाही",
-          "code": "2"
-        }
-      ]
-    },
-    "F4": {
-      "number": "F4",
-      "question": "तपासणी सुरू करण्यापूर्वी डॉक्टरांनी विश्वासाचे नाते निर्माण केले का?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "होय",
-          "code": "1"
-        },
-        {
-          "label": "नाही",
-          "code": "2"
-        }
-      ]
-    },
-    "F5": {
-      "number": "F5",
-      "question": "तपासणी दरम्यान डॉक्टरांनी हातमोजे वापरले का?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "होय",
-          "code": "1"
-        },
-        {
-          "label": "नाही",
-          "code": "2"
-        }
-      ]
-    },
-    "F6": {
-      "number": "F6",
-      "question": " डॉक्टरांनी निर्जंतुकीकरण साधने वापरली आहेत का?",
-      "type": "radio",
-      "options": [
-        {
-          "label": "होय",
-          "code": "1"
-        },
-        {
-          "label": "नाही",
-          "code": "2"
-        }
-      ]
+      FREQUENCIES: [
+        {label:"होय",value:"1" },
+        {label:"नाही",value:"2"}
+      ],
+          
     },
 
 

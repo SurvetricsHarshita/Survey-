@@ -420,7 +420,7 @@ const English = {
         {label:"Whether you visited Eye Clinic.", "id":"F1."},
         {label:"Were you physically examined by a doctor?", "id":"F2."},
         {label:"Whether eye sights were checked?", "id":"F3."},
-        {label:"WWas the eye doctor’s discussion understandable?", "id":"F4."},
+        {label:"Was the eye doctor’s discussion understandable?", "id":"F4."},
         {label:"Did the Doctor Build rapport before starting the examination?", "id":"F5."},
         {label:"Did the Doctor use gloves during the examination?", "id":"F6."},
         {label:"Did the Doctor use sterilized instruments?", "id":"F7."},
