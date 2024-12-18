@@ -468,7 +468,7 @@ function QuestionForm() {
 
 
     if (currentQuestion.number === "E15." && storedData["1.5"] !="3") {
-      alert("23")
+      // alert("23")
       // Jump to the nextStep if conditions are met
       setCurrentQuestionIndex((prev) => prev + currentQuestion.nextStep);
     } else if( currentQuestion.number == "E15F." && storedData["1.5"] != "2"){
