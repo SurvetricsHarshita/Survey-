@@ -33,10 +33,10 @@ function useAsk() {
   }
 
   function handleE15(answer, storedData) {
-    console.log("hi", storedData);
+    // console.log("hi", storedData);
     const s4aValue = storedData["1.5"] || "";
-    console.log("hi", s4aValue);
-alert("asd")
+    // console.log("hi", s4aValue);
+// alert("asd")
     if (s4aValue == "3" ) {
       return false;
     }
@@ -52,7 +52,7 @@ alert("asd")
   }
   function handleQ37(answer) {
     
-console.log(answer)
+// console.log(answer)
     if (answer == "1" ) {
       return false;
     }
@@ -67,9 +67,9 @@ console.log(answer)
         return true;
       }
   function handleS9e(answer, storedData) {
-    console.log("hi", storedData);
+    // console.log("hi", storedData);
     const s4aValue = storedData["S9e"] || "";
-    console.log("hi", s4aValue);
+    // console.log("hi", s4aValue);
 
     if (answer == "5" || answer == "6" || answer == "4") {
       return false;
@@ -78,9 +78,9 @@ console.log(answer)
   }
   function handleQ918(answer,storedData) {
     const sevenOne=storedData["7.1"]
-    console.log(sevenOne)
+    // console.log(sevenOne)
     
-    console.log(answer)
+    // console.log(answer)
         if (answer == "1" ) {
           return false;
         }
