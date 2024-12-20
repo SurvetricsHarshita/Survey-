@@ -52,7 +52,7 @@ const English = {
  
 
     "B1. ": {
-      "number": "B1",
+      "number": "B1.",
       "question": "Is the waiting area clean and well-maintained?",
       "type": "radio",
       "options": [

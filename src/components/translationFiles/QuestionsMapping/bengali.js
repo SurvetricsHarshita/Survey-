@@ -48,7 +48,7 @@ const bengali= {
       ]
     },
     "B1. ": {
-      "number": "B1. ",
+      "number": "B1.",
       "question": "অপেক্ষমাণ এলাকা কি পরিষ্কার এবং ভালভাবে রক্ষণাবেক্ষণ করা হয়?",
       "type": "radio",
       "options": [

@@ -50,7 +50,7 @@ const gujrati= {
       ]
     },
     "B1. ": {
-      "number": "B1. ",
+      "number": "B1.",
       "question": "શું વેઈટીંગ વિસ્તાર સ્વચ્છ અને સારી રીતે જાલવેલો છે?",
       "type": "radio",
       "options": [

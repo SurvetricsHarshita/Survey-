@@ -49,7 +49,7 @@ const assamese= {
       ]
     },
     "B1. ": {
-      "number": "B1. ",
+      "number": "B1.",
       "question": "অপেক্ষা কৰা স্থানটো পৰিষ্কাৰ আৰু ভালদৰে ৰক্ষণাবেক্ষণ কৰা হয়নে?",
       "type": "radio",
       "options": [

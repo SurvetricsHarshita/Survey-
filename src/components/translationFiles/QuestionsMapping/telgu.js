@@ -49,7 +49,7 @@ const telgu= {
       ]
     },
     "B1. ": {
-      "number": "B1. ",
+      "number": "B1.",
       "question": "వేచి ఉండే ప్రదేశం శుభ్రంగా మరియు చక్కగా నిర్వహించబడిందా?",
       "type": "radio",
       "options": [

@@ -49,7 +49,7 @@ const marathi = {
       ]
     },
     "B1. ": {
-      "number": "B1. ",
+      "number": "B1.",
       "question": "प्रतीक्षालय (वेटीग एरिया) स्वच्छ आणि व्यवस्थित आहे का?",
       "type": "radio",
       "options": [
