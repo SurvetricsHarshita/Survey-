@@ -576,7 +576,7 @@ const English = {
       "section": "G: Blood/Sputum Testing (If Applicable) "
     },
     "G2. ": {
-      "number": "G2. ",
+      "number": "G2.",
       "question": "If yes, did you visit blood testing or sputum collection section?",
       "type": "radio",
       "options": [
