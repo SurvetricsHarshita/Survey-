@@ -8,6 +8,12 @@ const English = {
     //   "inputType": "text"
     // },
     // /
+    "1.2": {
+      "number": 1.2,
+      "question": "Clinic Visited",
+      "type": "input",
+      "inputType": "text"
+    },
     // "1.3": {
     //   "number": 1.3,
     //   "question": "Date of Visit",
