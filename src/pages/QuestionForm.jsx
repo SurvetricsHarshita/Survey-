@@ -57,6 +57,7 @@ import assamese from "../components/translationFiles/QuestionsMapping/assamese";
 import bengali from "../components/translationFiles/QuestionsMapping/bengali";
 import gujrati from "../components/translationFiles/QuestionsMapping/gujrati";
 import telgu from "../components/translationFiles/QuestionsMapping/telgu";
+import kannada from "../components/translationFiles/QuestionsMapping/kannada";
 
 
 
@@ -68,6 +69,7 @@ function QuestionForm() {
   const { Section1: BenSection1} = bengali  || {};
   const { Section1: GujSection1} = gujrati || {};
   const { Section1: TelSection1} = telgu || {};
+    const { Section1: KanSection1} = kannada|| {};
   // Add fallback to prevent destructuring null
   // Add fallback to prevent destructuring null
   const { isOpen, onOpen, onClose } = useDisclosure();
