@@ -174,6 +174,12 @@ function QuestionForm() {
           
           ]); 
         break;
+           case "kan":
+          setSections([
+            KanSection1,
+          
+          ]); 
+        break;
       default:
         setSections([Section1]);; // Default to English if no match
         break;
