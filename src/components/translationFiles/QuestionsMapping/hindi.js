@@ -7,12 +7,12 @@ const hindi= {
     //   "section": "A: सेक्‍शन 1: ग्राहक की पृष्ठभूमि",
     //   "inputType": "text"
     // },
-    // "1.2": {
-    //   "number": 1.2,
-    //   "question": "विजिट की गई क्‍लीनिक",
-    //   "type": "input",
-    //   "inputType": "text"
-    // },
+    "1.2": {
+      "number": 1.2,
+      "question": "विजिट की गई क्‍लीनिक",
+      "type": "input",
+      "inputType": "text"
+    },
     // "1.3": {
     //   "number": 1.3,
     //   "question": "विज़िट की तारीख़",
