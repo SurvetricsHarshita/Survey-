@@ -7,12 +7,12 @@ const gujrati= {
     //   "section": "A: સેક્શન 1: ક્લાયન્ટ પૃષ્ઠભૂમિ",
     //   "inputType": "text"
     // },
-    "1.2": {
-      "number": 1.2,
-      "question": "ક્લિનિકની મુલાકાત લીધી",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.2": {
+    //   "number": 1.2,
+    //   "question": "ક્લિનિકની મુલાકાત લીધી",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
     // "1.3": {
     //   "number": 1.3,
     //   "question": "મુલાકાતની તારીખ",

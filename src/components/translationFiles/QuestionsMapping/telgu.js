@@ -7,12 +7,12 @@ const telgu= {
     //   "section": "A: సెక్షన్ 1:క్లయింట్ నేపథ్యం/బ్యాక్‌గ్రౌండ్",
     //   "inputType": "text"
     // },
-    "1.2": {
-      "number": 1.2,
-      "question": "క్లినిక్‌ని సందర్శించాను",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.2": {
+    //   "number": 1.2,
+    //   "question": "క్లినిక్‌ని సందర్శించాను",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
     // "1.3": {
     //   "number": 1.3,
     //   "question": "సందర్శించిన తేదీ",

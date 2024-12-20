@@ -7,12 +7,12 @@ const assamese= {
     //   "section": "A:শাখা 1: ক্লাইন্টৰ বেকগ্ৰাউণ্ড",
     //   "inputType": "text"
     // },
-    "1.2": {
-      "number": 1.2,
-      "question": "ক্লিনিক ভিজিট কৰিছে",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.2": {
+    //   "number": 1.2,
+    //   "question": "ক্লিনিক ভিজিট কৰিছে",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
     // "1.3": {
     //   "number": 1.3,
     //   "question": "সাক্ষাতৰ তাৰিখ",

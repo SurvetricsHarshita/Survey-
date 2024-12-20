@@ -6,12 +6,12 @@ const bengali= {
     //   "type": "input",
     //   "inputType": "text"
     // },
-    "1.2": {
-      "number": 1.2,
-      "question": "ক্লিনিক পরিদর্শন করেছেন",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.2": {
+    //   "number": 1.2,
+    //   "question": "ক্লিনিক পরিদর্শন করেছেন",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
     // "1.3": {
     //   "number": 1.3,
     //   "question": "পরিদর্শনের তারিখ",

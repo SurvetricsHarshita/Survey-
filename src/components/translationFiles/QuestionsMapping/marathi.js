@@ -7,12 +7,12 @@ const marathi = {
     //   "section": "A: विभाग 1: क्लायंटची पार्श्वभूमी",
     //   "inputType": "text"
     // },
-    "1.2": {
-      "number": 1.2,
-      "question": "क्लिनिक भेट",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.2": {
+    //   "number": 1.2,
+    //   "question": "क्लिनिक भेट",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
     // "1.3": {
     //   "number": 1.3,
     //   "question": "भेटीचा दिनांक",

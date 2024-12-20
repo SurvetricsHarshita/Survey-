@@ -6,12 +6,12 @@ const kannada= {
     //   "type": "input",
     //   "inputType": "text"
     // },
-    "1.2": {
-      "number": 1.2,
-      "question": "ಕ್ಲಿನಿಕ್ ಭೇಟಿ",
-      "type": "input",
-      "inputType": "text"
-    },
+    // "1.2": {
+    //   "number": 1.2,
+    //   "question": "ಕ್ಲಿನಿಕ್ ಭೇಟಿ",
+    //   "type": "input",
+    //   "inputType": "text"
+    // },
     // "1.3": {
     //   "number": 1.3,
     //   "question": "ಭೇಟಿಯ ದಿನಾಂಕ",
