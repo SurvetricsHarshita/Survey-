@@ -424,7 +424,9 @@ const gujrati= {
         }
       ] , 
       checkAsk:true,
-     nextStep:7
+      nextStep:9,
+      nextStep2:9,
+      nextStep3:17
     },
     F:{
       number:"F",

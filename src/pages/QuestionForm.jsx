@@ -474,59 +474,147 @@ function QuestionForm() {
       setOtherInput("");
     }
 
-
-    if (currentQuestion.number === "E15." && storedData["1.5"] !="3") {
-      // alert("23")
-      // Jump to the nextStep if conditions are met
-      setCurrentQuestionIndex((prev) => prev + currentQuestion.nextStep);
-    } else if( currentQuestion.number == "E15F." && storedData["1.5"] != "2"){
-      setCurrentQuestionIndex((prev) => prev + currentQuestion.nextStep);
-
-    }else if (currentQuestion.checkAsk && ask) {
-      // If checkAsk condition is true and ask is true
+    const skipAndCleanUp = (startIndex, endIndex, keysToDelete = []) => {
       setResponses((prev) => {
-        // Create a shallow copy of responses
         const updatedResponses = { ...prev };
     
-        // Calculate the range of skipped questions
-        const startIndex = currentQuestionIndex + 1;
-        const endIndex = currentQuestionIndex + (currentQuestion.nextStep || 2);
-    
-        // Remove responses for skipped questions
+        // Loop through the range and delete skipped questions from responses
         for (let i = startIndex; i <= endIndex; i++) {
           const skippedQuestionKey = questions[i]?.number;
-    
           if (skippedQuestionKey) {
             delete updatedResponses[skippedQuestionKey];
-            delete updatedResponses[`${skippedQuestionKey}_other`]; // Clean up "other" inputs
+            delete updatedResponses[`${skippedQuestionKey}_other`];
           }
         }
     
-        // Update the localStorage
+        // Delete specific keys if provided
+        keysToDelete.forEach((key) => {
+          delete updatedResponses[key];
+        });
+    
+        // Update localStorage for skipped questions
         const storedData = JSON.parse(localStorage.getItem("ProductsTest")) || {};
         for (let i = startIndex; i <= endIndex; i++) {
           const skippedQuestionKey = questions[i]?.number;
-    
           if (skippedQuestionKey) {
             delete storedData[skippedQuestionKey];
             delete storedData[`${skippedQuestionKey}_other`];
           }
         }
+    
+        // Delete specific keys from localStorage if provided
+        keysToDelete.forEach((key) => {
+          delete storedData[key];
+        });
+    
         localStorage.setItem("ProductsTest", JSON.stringify(storedData));
     
-        return updatedResponses; // Return the updated responses
+        return updatedResponses;
       });
+    };
     
-      // Increment the question index based on the nextStep
+    if (currentQuestion.number == "E15.") {
+      const keysToDelete = ["F1.", "F2.", "F3.", "F4.", "F5.", "F6.", "F7.","F9A", "F9B","F9C","F9D","F9E","E14F","E15F."];
+    
+      if (storedData["1.5"] != "2" && storedData["1.5"] != "3") {
+        skipAndCleanUp(
+          currentQuestionIndex + 1,
+          currentQuestionIndex + currentQuestion.nextStep3,
+          keysToDelete
+        );
+        setCurrentQuestionIndex((prev) => prev + currentQuestion.nextStep3);
+      } else if (storedData["1.5"] == "2" && storedData["1.5"] != "3") {
+        skipAndCleanUp(
+          currentQuestionIndex + 1,
+          currentQuestionIndex + currentQuestion.nextStep,
+          keysToDelete
+        );
+        setCurrentQuestionIndex((prev) => prev + currentQuestion.nextStep);
+      } else if (storedData["1.5"] != "2" && storedData["1.5"] == "3") {
+        skipAndCleanUp(currentQuestionIndex + 1, currentQuestionIndex + 1);
+        setCurrentQuestionIndex((prev) => prev + 1);
+      }
+    } else if (currentQuestion.number =="E15F." && storedData["1.5"] != "2") {
+      skipAndCleanUp(
+        currentQuestionIndex + 1,
+        currentQuestionIndex + currentQuestion.nextStep
+      );
+      setCurrentQuestionIndex((prev) => prev + currentQuestion.nextStep);
+    } else if (currentQuestion.checkAsk && ask) {
+      const startIndex = currentQuestionIndex + 1;
+      const endIndex = currentQuestionIndex + (currentQuestion.nextStep || 2);
+    
+      skipAndCleanUp(startIndex, endIndex);
+    
       if (currentQuestion.nextStep && ask) {
         setCurrentQuestionIndex((prev) => prev + currentQuestion.nextStep);
       } else {
         setCurrentQuestionIndex((prev) => prev + 2);
       }
     } else {
-      // Default increment by 1
+      skipAndCleanUp(currentQuestionIndex + 1, currentQuestionIndex + 1);
       setCurrentQuestionIndex((prev) => prev + 1);
     }
+    
+    // if (currentQuestion.number == "E15.") {
+    //   if (storedData["1.5"] != "2" && storedData["1.5"] != "3") {
+    //     // Navigate to the next step
+    //     setCurrentQuestionIndex((prev) => prev + currentQuestion.nextStep3);
+    //   } else if (storedData["1.5"] == "2" && storedData["1.5"] != "3") {
+    //     // Navigate to the next alternative step
+    //     setCurrentQuestionIndex((prev) => prev + currentQuestion.nextStep);
+    //   }else if (storedData["1.5"] != "2" && storedData["1.5"] == "3") {
+    //     // Navigate to the next alternative step
+    //     setCurrentQuestionIndex((prev) => prev + 1);
+    //   }
+    // }else if( currentQuestion.number == "E15F." && storedData["1.5"] != "2"){
+    //   setCurrentQuestionIndex((prev) => prev + currentQuestion.nextStep);
+
+    // }else if (currentQuestion.checkAsk && ask) {
+    //   // If checkAsk condition is true and ask is true
+    //   setResponses((prev) => {
+    //     // Create a shallow copy of responses
+    //     const updatedResponses = { ...prev };
+    
+    //     // Calculate the range of skipped questions
+    //     const startIndex = currentQuestionIndex + 1;
+    //     const endIndex = currentQuestionIndex + (currentQuestion.nextStep || 2);
+    
+    //     // Remove responses for skipped questions
+    //     for (let i = startIndex; i <= endIndex; i++) {
+    //       const skippedQuestionKey = questions[i]?.number;
+    
+    //       if (skippedQuestionKey) {
+    //         delete updatedResponses[skippedQuestionKey];
+    //         delete updatedResponses[`${skippedQuestionKey}_other`]; // Clean up "other" inputs
+    //       }
+    //     }
+    
+    //     // Update the localStorage
+    //     const storedData = JSON.parse(localStorage.getItem("ProductsTest")) || {};
+    //     for (let i = startIndex; i <= endIndex; i++) {
+    //       const skippedQuestionKey = questions[i]?.number;
+    
+    //       if (skippedQuestionKey) {
+    //         delete storedData[skippedQuestionKey];
+    //         delete storedData[`${skippedQuestionKey}_other`];
+    //       }
+    //     }
+    //     localStorage.setItem("ProductsTest", JSON.stringify(storedData));
+    
+    //     return updatedResponses; // Return the updated responses
+    //   });
+    
+    //   // Increment the question index based on the nextStep
+    //   if (currentQuestion.nextStep && ask) {
+    //     setCurrentQuestionIndex((prev) => prev + currentQuestion.nextStep);
+    //   } else {
+    //     setCurrentQuestionIndex((prev) => prev + 2);
+    //   }
+    // } else {
+    //   // Default increment by 1
+    //   setCurrentQuestionIndex((prev) => prev + 1);
+    // }
     
     setOtherInput("");
 
@@ -540,7 +628,7 @@ function QuestionForm() {
 
   // setMulti(1)
   const handlePrevious = () => {
-    let includesArray = [ "1.8","E14F","H1"];
+    let includesArray = [ "1.8","E14F","H1","G1."];
     if (includesArray.includes(currentQuestion.number)) {
       setCurrentQuestionIndex((prevIndex) => {
         let newIndex = prevIndex;

@@ -423,7 +423,9 @@ const marathi = {
         }
       ] , 
       checkAsk:true,
-     nextStep:7
+      nextStep:9,
+      nextStep2:9,
+      nextStep3:17
     },
     F:{
       number:"F",
@@ -433,7 +435,7 @@ const marathi = {
         {label:"तुम्ही आय क्लिनिकला (डोळ्याच्या) भेट दिली होती की नाही.","id":"F1."},
         {label: "तुमची डॉक्टरांनी शारीरिक तपासणी केली होती का?", "id":"F2."},
         {label:" डोळ्यांची दृष्टी तपासली की नाही?","id":"F3."},
-        {label:"WWas the eye doctor’s discussion understandable?", "id":"F4."},
+        {label:"Was the eye doctor’s discussion understandable?", "id":"F4."},
         {label:"तपासणी सुरू करण्यापूर्वी डॉक्टरांनी विश्वासाचे नाते निर्माण केले का?","id":"F5."},
         {label:"तपासणी दरम्यान डॉक्टरांनी हातमोजे वापरले का?","id":"F6."},
         {label:" डॉक्टरांनी निर्जंतुकीकरण साधने वापरली आहेत का?","id":"F7."},
